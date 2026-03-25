@@ -1,0 +1,2 @@
+# ethns
+simple website
