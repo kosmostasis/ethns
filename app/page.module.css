@@ -33,19 +33,35 @@
 
 .brand {
   display: inline-flex;
-  flex-direction: column;
-}
-
-.brandTag {
-  font-size: 0.8rem;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  align-items: center;
 }
 
 .brandTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
   font-size: 1.15rem;
   font-weight: 700;
+}
+
+.brandTitle a {
+  color: inherit;
+}
+
+.brandLogos {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.brandLogos a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.brandLogo {
+  width: 20px;
+  height: 20px;
 }
 
 .nav {
