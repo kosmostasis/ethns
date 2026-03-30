@@ -1,4 +1,4 @@
-import Image from "next/image";
+import HeroArtImage from "./HeroArtImage";
 import styles from "./page.module.css";
 
 const links = {
@@ -48,19 +48,7 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.heroArt}>
-            <Image
-              src="https://ethereum.org/images/assets/svgs/eth-diamond-purple.svg"
-              alt="Ethereum diamond mark"
-              width={148}
-              height={200}
-              priority
-            />
-            <Image
-              src="https://ethereum.org/_next/static/media/hackathon_transparent.0818b178.png"
-              alt="Ethereum hackathon illustration"
-              width={360}
-              height={280}
-            />
+            <HeroArtImage />
           </div>
         </section>
 
