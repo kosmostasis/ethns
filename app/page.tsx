@@ -44,7 +44,7 @@ export default function Home() {
               </a>
             </span>
             <a href={links.nsEthns} target="_blank" rel="noopener noreferrer">
-              Ethereum NS
+              ETH NS
             </a>
           </span>
         </div>
@@ -58,18 +58,22 @@ export default function Home() {
       <main>
         <section className={styles.hero}>
           <div className={styles.heroCopy}>
-            <p className={styles.eyebrow}>May 2026 at Network School</p>
-            <h1>Ethereum NS: bring your ecosystem to Network School.</h1>
+            <p className={styles.eyebrow}>May 2026</p>
+            <h1>
+              Ethereum NS
+              <br />
+              <span className={styles.heroSubhead}>Summon your community from the cloud to Network School</span>
+            </h1>
             <p className={styles.lead}>
-              A residency for workshops, builder lock-ins, and hackathons rooted in Ethereum&apos;s
-              CROPS values and user self-sovereignty.
+              A permanent ETH node at NS. Built for talent development, hackathons, and builder
+              lock-ins, rooted in Ethereum&apos;s values and self-sovereignty.
             </p>
             <div className={styles.ctas}>
               <a className={styles.primaryCta} href={links.quickSync} target="_blank" rel="noopener noreferrer">
                 Book a quick sync
               </a>
               <a className={styles.secondaryCta} href={links.applyInvite} target="_blank" rel="noopener noreferrer">
-                Apply with Ethereum&apos;s link
+                Apply to Network School
               </a>
             </div>
           </div>
@@ -178,31 +182,19 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <p>Contact: <a href="mailto:support@ns.com">support@ns.com</a></p>
         <p>
-          Sources and attribution:{" "}
+          Community Chat Support:{" "}
+          <a href="https://t.me/cosmolocalroads" target="_blank" rel="noopener noreferrer">
+            @cosmolocalroads
+          </a>
+          .{" "}
+          Sources & Attribution:{" "}
           <a href={links.nsAbout} target="_blank" rel="noopener noreferrer">
             Network School
           </a>
           ,{" "}
           <a href={links.ethereumAssets} target="_blank" rel="noopener noreferrer">
-            ethereum.org assets
-          </a>
-          ,{" "}
-          <a href={links.hackmdOutreach} target="_blank" rel="noopener noreferrer">
-            outreach brief
-          </a>
-          ,{" "}
-          <a href={links.espRfp} target="_blank" rel="noopener noreferrer">
-            ESP hubs RFP
-          </a>
-          ,{" "}
-          <a href={links.efMandateBlog} target="_blank" rel="noopener noreferrer">
-            EF mandate blog
-          </a>
-          ,{" "}
-          <a href={links.efMandateCanonical} target="_blank" rel="noopener noreferrer">
-            canonical text
+            Ethereum.org
           </a>
           .
         </p>
