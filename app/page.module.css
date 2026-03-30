@@ -96,6 +96,10 @@
   text-wrap: balance;
 }
 
+.heroSubhead {
+  font-weight: 500;
+}
+
 .lead {
   margin-top: 1rem;
   font-size: 1.1rem;
