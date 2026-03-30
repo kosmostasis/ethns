@@ -1,9 +1,12 @@
+import Image from "next/image";
 import HeroArtImage from "./HeroArtImage";
 import styles from "./page.module.css";
 
 const links = {
   quickSync: "https://app.reclaim.ai/m/kosmostasis/flexible-meeting",
   applyInvite: "https://ns.com/ethns/invite",
+  ethereumHome: "https://ethereum.org",
+  nsHome: "https://ns.com",
   nsAbout: "https://ns.com/about",
   nsEthns: "https://ns.com/ethns",
   espRfp: "https://esp.ethereum.foundation/applicants/rfp/community-hubs",
@@ -18,10 +21,33 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <header className={styles.header}>
-        <a className={styles.brand} href={links.nsEthns} target="_blank" rel="noopener noreferrer">
-          <span className={styles.brandTag}>Network School</span>
-          <span className={styles.brandTitle}>Ethereum NS</span>
-        </a>
+        <div className={styles.brand}>
+          <span className={styles.brandTitle}>
+            <span className={styles.brandLogos} aria-hidden="true">
+              <a href={links.ethereumHome} target="_blank" rel="noopener noreferrer" aria-label="Ethereum">
+                <Image
+                  src="https://ethereum.org/images/assets/svgs/eth-diamond-purple.svg"
+                  alt=""
+                  width={20}
+                  height={20}
+                  className={styles.brandLogo}
+                />
+              </a>
+              <a href={links.nsHome} target="_blank" rel="noopener noreferrer" aria-label="Network School">
+                <Image
+                  src="https://assets.ns.com/static/about/network-state-and-network-school-logos/network-state-plus-flag-logos/network-state-plus-flag-logo-black.svg"
+                  alt=""
+                  width={20}
+                  height={20}
+                  className={styles.brandLogo}
+                />
+              </a>
+            </span>
+            <a href={links.nsEthns} target="_blank" rel="noopener noreferrer">
+              Ethereum NS
+            </a>
+          </span>
+        </div>
         <nav className={styles.nav}>
           <a href="#sponsor">Sponsor</a>
           <a href="#teach">Teach</a>
