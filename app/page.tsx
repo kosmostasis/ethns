@@ -58,7 +58,7 @@ export default function Home() {
       <main>
         <section className={styles.hero}>
           <div className={styles.heroCopy}>
-            <p className={styles.eyebrow}>May 2026</p>
+            <p className={styles.eyebrow}>May 2026: Genesis Block Month</p>
             <h1>
               Ethereum NS
               <br />
@@ -70,7 +70,7 @@ export default function Home() {
             </p>
             <div className={styles.ctas}>
               <a className={styles.primaryCta} href={links.quickSync} target="_blank" rel="noopener noreferrer">
-                Book a quick sync
+                Book a Quick Sync
               </a>
               <a className={styles.secondaryCta} href={links.applyInvite} target="_blank" rel="noopener noreferrer">
                 Apply to Network School
@@ -83,34 +83,34 @@ export default function Home() {
         </section>
 
         <section className={styles.section}>
-          <h2>Partner outcomes</h2>
+          <h2>Partner Outcomes</h2>
           <div className={styles.cards}>
             <article id="sponsor" className={styles.card}>
-              <h3>Sponsor builders</h3>
-              <p>Bring teams and support scholars while connecting with high-agency builders during the residency.</p>
+              <h3>Sponsor Builders</h3>
+              <p>Bring teams and support scholars while connecting with high-agency builders during our Genesis residency.</p>
             </article>
             <article id="teach" className={styles.card}>
-              <h3>Teach your ecosystem</h3>
-              <p>Host workshops aligned to your roadmap and work directly with founders who are ready to ship.</p>
+              <h3>Teach Your Tech Stack</h3>
+              <p>Host hands on workshops, from a primer to a deep dive, fully aligned to your roadmap and work directly with builders who are ready to ship.</p>
             </article>
             <article id="host" className={styles.card}>
-              <h3>Host a hackathon</h3>
-              <p>Run an on-site build sprint with on-the-ground support and a curated residency community.</p>
+              <h3>Host a Hackathon or Social</h3>
+              <p>Run an on-site build sprint or social event with on-the-ground support and a curated community.</p>
             </article>
           </div>
         </section>
 
         <section className={styles.section}>
-          <h2>What partnering looks like</h2>
+          <h2>What Partnering Looks Like</h2>
           <ul className={styles.list}>
             <li>Your team hosts workshops or builder lock-ins in May.</li>
-            <li>You promote via your referral link to unlock scholarship support.</li>
-            <li>Optionally sponsor scholars, host social events, or run your own hackathon.</li>
+            <li>You promote the event in your ecosystem, and sponsor builders to come as scholars.</li>
+            <li>Optionally, we help you host social events, or run your own hackathon challenge.</li>
           </ul>
         </section>
 
         <section className={styles.section}>
-          <h2>Builder experience</h2>
+          <h2>Builder Experience</h2>
           <ul className={styles.list}>
             <li>25% discounted monthly stay with referral pricing in the $1125-2250 range.</li>
             <li>Access to all programming, mentorship, and workshop infrastructure.</li>
@@ -120,14 +120,14 @@ export default function Home() {
         </section>
 
         <section className={styles.section}>
-          <h2>Why Ethereum teams choose ETHNS</h2>
+          <h2>Why Ethereum Teams Choose ETHNS</h2>
           <div className={styles.credibilityGrid}>
             <article>
-              <h3>Censorship resistance</h3>
+              <h3>Censorship Resistance</h3>
               <p>Programming favors open participation and resilient builder coordination.</p>
             </article>
             <article>
-              <h3>Open source values</h3>
+              <h3>Open Source Values</h3>
               <p>Education and contribution paths are designed for public learning and iteration.</p>
             </article>
             <article>
@@ -135,7 +135,7 @@ export default function Home() {
               <p>Talent development emphasizes safe defaults and secure product thinking.</p>
             </article>
             <article>
-              <h3>User self-sovereignty</h3>
+              <h3>User Self-Sovereignty</h3>
               <p>The residency develops builders working toward user agency and ownership.</p>
             </article>
           </div>
@@ -146,7 +146,7 @@ export default function Home() {
         </section>
 
         <section className={styles.section}>
-          <h2>May 2026 logistics</h2>
+          <h2>May 2026 Logistics</h2>
           <p>
             Ethereum NS runs throughout May 2026 at Network School. Teams and builders joining
             through the referral flow receive 25% pricing support and full residency access.
