@@ -1,5 +1,6 @@
 import Image from "next/image";
 import HeroArtImage from "./HeroArtImage";
+import SponsorFaq from "./SponsorFaq";
 import styles from "./page.module.css";
 
 const links = {
@@ -49,9 +50,9 @@ export default function Home() {
           </span>
         </div>
         <nav className={styles.nav}>
-          <a href="#sponsor">Sponsor</a>
-          <a href="#teach">Teach</a>
-          <a href="#host">Host a Hackathon</a>
+          <a href="https://luma.com/ethns" target="_blank" rel="noopener noreferrer" aria-label="Luma">
+            <Image src="/calendar-icon.svg" alt="" width={20} height={20} className={styles.navIcon} />
+          </a>
         </nav>
       </header>
 
@@ -110,17 +111,23 @@ export default function Home() {
         </section>
 
         <section className={styles.section}>
-          <h2>Builder Experience</h2>
+          <h2>Participant Experience</h2>
           <ul className={styles.list}>
-            <li>25% discounted monthly stay with referral pricing in the $1125-2250 range.</li>
+            <li>
+              25% discounted monthly stay via{" "}
+              <a href="https://ns.com/ethns/invite" target="_blank" rel="noopener noreferrer">
+                ETH NS referral
+              </a>
+              , starting at $1125.
+            </li>
             <li>Access to all programming, mentorship, and workshop infrastructure.</li>
-            <li>24/7 co-working, fitness access, healthy meals, and serviced rooms.</li>
+            <li>24/7 co-working and gym, fitness sessions, healthy meals, and serviced rooms.</li>
             <li>500+ community members and direct ecosystem exposure.</li>
           </ul>
         </section>
 
         <section className={styles.section}>
-          <h2>Why Ethereum Teams Choose ETHNS</h2>
+          <h2>Why Ethereum Teams Should Join ETH NS</h2>
           <div className={styles.credibilityGrid}>
             <article>
               <h3>Censorship Resistance</h3>
@@ -155,29 +162,7 @@ export default function Home() {
 
         <section className={styles.section}>
           <h2>Sponsor FAQ</h2>
-          <div className={styles.faq}>
-            <article>
-              <h3>Do we need to be crypto-native?</h3>
-              <p>
-                No. The format is best for teams committed to Ethereum-aligned builder development,
-                regardless of maturity stage.
-              </p>
-            </article>
-            <article>
-              <h3>Is access open?</h3>
-              <p>
-                Yes. The program is designed around open participation, transparent operations, and
-                accountable impact reporting.
-              </p>
-            </article>
-            <article>
-              <h3>What do you need from us?</h3>
-              <p>
-                A workshop or build sprint, ecosystem amplification through referral, and optional
-                scholarship or event support.
-              </p>
-            </article>
-          </div>
+          <SponsorFaq />
         </section>
       </main>
 
