@@ -90,6 +90,17 @@ const tabs = [
               <li>Your team hosts workshops or builder lock-ins in May.</li>
               <li>You promote the event in your ecosystem, and sponsor builders to come as scholars.</li>
               <li>Optionally, we help you host social events, or run your own hackathon challenge.</li>
+              <li>
+                Something else comes to mind? Please{" "}
+                <a
+                  href="https://app.reclaim.ai/m/kosmostasis/flexible-meeting"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  book a quick sync
+                </a>{" "}
+                with our team to discuss your ideas.
+              </li>
             </ul>
           </details>
         </div>
