@@ -474,6 +474,67 @@
   text-underline-offset: 3px;
 }
 
+.calendarMockup {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.calendarTitle {
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.calendarLegend {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1rem;
+  justify-content: center;
+  font-size: 0.92rem;
+}
+
+.calendarWorkshop {
+  color: #2447ff;
+}
+
+.calendarDiscussion {
+  color: #8a2be2;
+}
+
+.calendarSocial {
+  color: #3b7f2f;
+}
+
+.calendarLecture {
+  color: #ff2d20;
+}
+
+.calendarHackathon {
+  color: #8f2f00;
+}
+
+.calendarTable {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.calendarTable th,
+.calendarTable td {
+  border: 1px solid var(--border);
+  padding: 0.4rem;
+  vertical-align: top;
+}
+
+.calendarTable th {
+  background: #fff;
+  font-weight: 700;
+}
+
 .list a {
   color: inherit;
   text-decoration: underline;
