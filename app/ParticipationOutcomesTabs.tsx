@@ -67,26 +67,63 @@ const tabs = [
     id: "ecosystem",
     label: "Ecosystem Partners",
     bodyNode: (
-      <div className={styles.cards}>
-        <article id="sponsor" className={styles.card}>
-          <h3>Sponsor Builders</h3>
-          <p>Bring teams and support scholars while connecting with high-agency builders during our Genesis residency.</p>
-        </article>
-        <article id="teach" className={styles.card}>
-          <h3>Teach Your Tech Stack</h3>
-          <p>Host hands on workshops, from a primer to a deep dive, fully aligned to your roadmap and work directly with builders who are ready to ship.</p>
-        </article>
-        <article id="host" className={styles.card}>
-          <h3>Host a Hackathon or Social</h3>
-          <p>Run an on-site build sprint or social event with on-the-ground support and a curated community.</p>
-        </article>
-      </div>
+      <>
+        <div className={styles.cards}>
+          <article id="sponsor" className={styles.card}>
+            <h3>Sponsor Builders</h3>
+            <p>Bring teams and support scholars while connecting with high-agency builders during our Genesis residency.</p>
+          </article>
+          <article id="teach" className={styles.card}>
+            <h3>Teach Your Tech Stack</h3>
+            <p>Host hands on workshops, from a primer to a deep dive, fully aligned to your roadmap and work directly with builders who are ready to ship.</p>
+          </article>
+          <article id="host" className={styles.card}>
+            <h3>Host a Hackathon or Social</h3>
+            <p>Run an on-site build sprint or social event with on-the-ground support and a curated community.</p>
+          </article>
+          <details className={`${styles.card} ${styles.outcomesSubCard} ${styles.outcomesDetails}`} open>
+            <summary className={styles.outcomesSummary}>What do we need to do to be considered partners? Any combination of these actions qualifies you!</summary>
+            <ul className={styles.list}>
+              <li>Your team hosts workshops or builder lock-ins in May.</li>
+              <li>You promote the event in your ecosystem, and sponsor builders to come as scholars.</li>
+              <li>Optionally, we help you host social events, or run your own hackathon challenge.</li>
+            </ul>
+          </details>
+        </div>
+      </>
     ),
   },
   {
     id: "community",
     label: "Community Partners",
-    bodyNode: <p>Content for Community Partners is coming soon.</p>,
+    bodyNode: (
+      <div className={styles.cards}>
+        <article className={styles.card}>
+          <h3>Galvanize Your Community</h3>
+          <p>
+            Gather at Network School for a month of building in person, explore ecosystem
+            opportunities, and share the unique offer of your homebase with the local +500 strong
+            community of NS.
+          </p>
+        </article>
+        <article className={styles.card}>
+          <h3>Match with Opportunities</h3>
+          <p>
+            Whenever possible, we&apos;ll match your community with opportunities spaning from our
+            network of partners such as: scholarships, builder bounties, ecosystem showcases,
+            content features, and more.
+          </p>
+        </article>
+        <article className={styles.card}>
+          <h3>Knowledge Sharing</h3>
+          <p>
+            Meet lifetime allies, debate best community practices, explore new models of permanent
+            community living, and leave inspired to continue building your own space now with a
+            bridge to Network School.
+          </p>
+        </article>
+      </div>
+    ),
   },
   {
     id: "teams",
@@ -105,7 +142,7 @@ const tabs = [
           <p>Host team formats like demo days, hackathons, retreats, and workshops at Network School.</p>
         </article>
         <article className={styles.card}>
-          <h3>Likeminded Builder Community</h3>
+          <h3>Likeminded Community</h3>
           <p>
             Immerse yourself in a community of 500+ purpose-driven builders, with deep cultural
             diversity, and a shared founder mindset.
