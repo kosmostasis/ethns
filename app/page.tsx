@@ -88,15 +88,6 @@ export default function Home() {
         </section>
 
         <section className={styles.section}>
-          <h2>What Partnering Looks Like</h2>
-          <ul className={styles.list}>
-            <li>Your team hosts workshops or builder lock-ins in May.</li>
-            <li>You promote the event in your ecosystem, and sponsor builders to come as scholars.</li>
-            <li>Optionally, we help you host social events, or run your own hackathon challenge.</li>
-          </ul>
-        </section>
-
-        <section className={styles.section}>
           <h2>Why Ethereum Teams Should Join ETH NS</h2>
           <div className={styles.credibilityGrid}>
             <article>
@@ -123,36 +114,43 @@ export default function Home() {
         </section>
 
         <section className={styles.section}>
-          <h2>General Logistics Overview</h2>
-          <p>
-            Ethereum NS runs throughout May 2026 at Network School. Teams and builders joining
-            through the referral flow receive 25% pricing support and full residency access. Full
-            details for logistics are provided by Network School directly upon acceptance.
-          </p>
-        </section>
-
-        <section className={styles.section}>
           <h2>FAQ</h2>
-          <SponsorFaq />
+          <div className={styles.faq}>
+            <details className={styles.faqItem} open>
+              <summary className={styles.faqQuestion}>General Logistics Overview</summary>
+              <p className={styles.faqAnswer}>
+                Ethereum NS runs throughout May 2026 at Network School. Teams and builders joining
+                through the referral flow receive 25% pricing support and full residency access.
+                Full details for logistics are provided by Network School directly upon acceptance.
+              </p>
+            </details>
+            <SponsorFaq />
+          </div>
         </section>
       </main>
 
       <footer className={styles.footer}>
         <p>
-          Community Chat Support:{" "}
-          <a href="https://t.me/cosmolocalroads" target="_blank" rel="noopener noreferrer">
-            @cosmolocalroads
+          Built with ❤️ at{" "}
+          <a href={links.nsAbout} target="_blank" rel="noopener noreferrer" aria-label="Network School">
+            <Image
+              src="https://assets.ns.com/static/about/network-state-and-network-school-logos/network-state-plus-flag-logos/network-state-plus-flag-logo-black.svg"
+              alt=""
+              width={18}
+              height={18}
+              className={styles.footerFlag}
+            />
           </a>
-          .{" "}
-          Sources & Attribution:{" "}
+        </p>
+        <p>
+          Sources + Attribution:{" "}
           <a href={links.nsAbout} target="_blank" rel="noopener noreferrer">
             Network School
           </a>
-          ,{" "}
+          {" & "}
           <a href={links.ethereumAssets} target="_blank" rel="noopener noreferrer">
             Ethereum.org
           </a>
-          .
         </p>
       </footer>
     </div>
