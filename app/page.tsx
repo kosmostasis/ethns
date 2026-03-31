@@ -88,32 +88,6 @@ export default function Home() {
         </section>
 
         <section className={styles.section}>
-          <h2>Why Ethereum Teams Should Join ETH NS</h2>
-          <div className={styles.credibilityGrid}>
-            <article>
-              <h3>Censorship Resistance</h3>
-              <p>Programming favors open participation and resilient builder coordination.</p>
-            </article>
-            <article>
-              <h3>Open Source Values</h3>
-              <p>Education and contribution paths are designed for public learning and iteration.</p>
-            </article>
-            <article>
-              <h3>Privacy + security</h3>
-              <p>Talent development emphasizes safe defaults and secure product thinking.</p>
-            </article>
-            <article>
-              <h3>User Self-Sovereignty</h3>
-              <p>The residency develops builders working toward user agency and ownership.</p>
-            </article>
-          </div>
-          <p className={styles.credibilityNote}>
-            The model aligns with Ethereum Community Hubs requirements around open access, safety,
-            sustainable operations, and impact reporting.
-          </p>
-        </section>
-
-        <section className={styles.section}>
           <h2>FAQ</h2>
           <div className={styles.faq}>
             <details className={styles.faqItem} open>
