@@ -303,6 +303,10 @@
   cursor: pointer;
 }
 
+.outcomesSummaryEmoji {
+  filter: grayscale(1);
+}
+
 .outcomesSummary::-webkit-details-marker {
   display: none;
 }
