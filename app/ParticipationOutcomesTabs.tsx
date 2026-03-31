@@ -82,7 +82,10 @@ const tabs = [
             <p>Run an on-site build sprint or social event with on-the-ground support and a curated community.</p>
           </article>
           <details className={`${styles.card} ${styles.outcomesSubCard} ${styles.outcomesDetails}`} open>
-            <summary className={styles.outcomesSummary}>What do we need to do to be considered partners? Any combination of these actions qualifies you!</summary>
+            <summary className={styles.outcomesSummary}>
+              What do we need to do to be considered partners? Any combination of these actions
+              qualifies you <span className={styles.outcomesSummaryEmoji}>👇</span>
+            </summary>
             <ul className={styles.list}>
               <li>Your team hosts workshops or builder lock-ins in May.</li>
               <li>You promote the event in your ecosystem, and sponsor builders to come as scholars.</li>
