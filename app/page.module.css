@@ -8,6 +8,7 @@
   --accent-dark: #5136b3;
 
   min-height: 100vh;
+  padding-bottom: 0.02in;
   color: var(--text);
   background:
     radial-gradient(circle at 12% 8%, rgba(111, 76, 235, 0.1), transparent 32%),
@@ -85,22 +86,49 @@
 .hero {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
-  gap: 2rem;
+  column-gap: 2rem;
+  row-gap: 0;
   padding: 2.75rem 0 1rem;
+  align-items: start;
+}
+
+.hero .eyebrow {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.hero .lead {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.hero .ctas {
+  grid-column: 1;
+  grid-row: 4;
+}
+
+.hero .heroArt {
+  grid-column: 2;
+  grid-row: 2 / 4;
+  align-self: stretch;
+  min-height: 0;
 }
 
 .eyebrow {
   color: var(--accent-dark);
   font-weight: 600;
-  margin-bottom: 0.8rem;
+  margin: 0 0 0.5rem;
 }
 
 .hero h1 {
+  grid-column: 1;
+  grid-row: 2;
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.15;
   letter-spacing: -0.02em;
   text-wrap: balance;
+  margin: 0 0 0.75rem;
 }
 
 .heroSubhead {
@@ -108,7 +136,7 @@
 }
 
 .lead {
-  margin-top: 1rem;
+  margin: 0;
   font-size: 1.1rem;
   color: var(--muted);
   max-width: 58ch;
@@ -118,7 +146,7 @@
   display: flex;
   gap: 0.85rem;
   flex-wrap: wrap;
-  margin-top: 1.6rem;
+  margin-top: 1.25rem;
 }
 
 .primaryCta,
@@ -149,20 +177,21 @@
 }
 
 .heroArt {
-  display: grid;
-  justify-items: center;
-  align-content: start;
-  gap: 0.8rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .heroImageFrame {
   position: relative;
   width: min(100%, 520px);
+  max-height: 100%;
   aspect-ratio: 16 / 10;
 }
 
 .heroImage {
   object-fit: contain;
+  object-position: bottom center;
 }
 
 .section {
@@ -203,6 +232,117 @@
 
 .card p {
   font-size: 0.95rem;
+}
+
+.outcomesTabs {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.outcomesTabList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.outcomesTab,
+.outcomesTabActive {
+  padding: 0.55rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.92rem;
+  cursor: pointer;
+  pointer-events: auto;
+  position: relative;
+  z-index: 3;
+}
+
+.outcomesTabActive {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.outcomesTab:hover {
+  border-color: var(--accent);
+  color: var(--accent-dark);
+}
+
+.outcomesPanel {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.95rem;
+  background: #fcfbff;
+  min-height: 140px;
+  position: relative;
+  z-index: 1;
+}
+
+.outcomesEveryone {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.benefitsCloud {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.benefitItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.benefitChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--muted);
+}
+
+.benefitChip:hover {
+  border-color: var(--accent);
+  color: var(--accent-dark);
+}
+
+.benefitChip a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.benefitIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25em;
+  line-height: 1;
+  font-size: 0.95rem;
+  filter: grayscale(1);
+  transform: translateY(1px);
+}
+
+.benefitJoin,
+.benefitEquals {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.benefitPrice {
+  font-weight: 700;
+  color: var(--text);
 }
 
 .list {
@@ -274,6 +414,18 @@
   line-height: 1.6;
 }
 
+.faqAnswer a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.list a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .footer {
   margin: 2rem auto 3rem;
   color: var(--muted);
@@ -292,8 +444,38 @@
     grid-template-columns: 1fr;
   }
 
+  .hero .eyebrow,
+  .hero h1,
+  .hero .lead,
+  .hero .ctas {
+    grid-column: 1;
+  }
+
+  .hero .eyebrow {
+    grid-row: 1;
+  }
+
+  .hero h1 {
+    grid-row: 2;
+  }
+
+  .hero .lead {
+    grid-row: 3;
+  }
+
+  .hero .heroArt {
+    grid-column: 1;
+    grid-row: 4;
+    align-self: auto;
+  }
+
+  .hero .ctas {
+    grid-row: 5;
+  }
+
   .heroImageFrame {
     width: min(100%, 680px);
+    max-height: none;
   }
 
   .cards {
