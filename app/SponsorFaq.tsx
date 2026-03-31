@@ -72,7 +72,7 @@ const items: FaqItem[] = [
 
 export default function SponsorFaq() {
   return (
-    <div className={styles.faq}>
+    <>
       {items.map((item, index) => {
         return (
           <details key={item.question} className={styles.faqItem}>
@@ -83,6 +83,6 @@ export default function SponsorFaq() {
           </details>
         );
       })}
-    </div>
+    </>
   );
 }
