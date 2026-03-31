@@ -1,5 +1,6 @@
 import Image from "next/image";
 import HeroArtImage from "./HeroArtImage";
+import ParticipationOutcomesTabs from "./ParticipationOutcomesTabs";
 import SponsorFaq from "./SponsorFaq";
 import styles from "./page.module.css";
 
@@ -58,25 +59,23 @@ export default function Home() {
 
       <main>
         <section className={styles.hero}>
-          <div className={styles.heroCopy}>
-            <p className={styles.eyebrow}>May 2026: Genesis Block Month</p>
-            <h1>
-              Ethereum NS
-              <br />
-              <span className={styles.heroSubhead}>Summon your community from the cloud to Network School</span>
-            </h1>
-            <p className={styles.lead}>
-              A permanent ETH node at NS. Built for talent development, hackathons, and builder
-              lock-ins, rooted in Ethereum&apos;s values and self-sovereignty.
-            </p>
-            <div className={styles.ctas}>
-              <a className={styles.primaryCta} href={links.quickSync} target="_blank" rel="noopener noreferrer">
-                Book a Quick Sync
-              </a>
-              <a className={styles.secondaryCta} href={links.applyInvite} target="_blank" rel="noopener noreferrer">
-                Apply to Network School
-              </a>
-            </div>
+          <p className={styles.eyebrow}>May 2026: Genesis Block Month</p>
+          <h1>
+            Ethereum NS
+            <br />
+            <span className={styles.heroSubhead}>Summon your community from the cloud to Network School</span>
+          </h1>
+          <p className={styles.lead}>
+            A permanent ETH node at NS. Built for talent development, hackathons, and builder lock-ins, rooted in
+            Ethereum&apos;s values and self-sovereignty.
+          </p>
+          <div className={styles.ctas}>
+            <a className={styles.primaryCta} href={links.quickSync} target="_blank" rel="noopener noreferrer">
+              Book a Quick Sync
+            </a>
+            <a className={styles.secondaryCta} href={links.applyInvite} target="_blank" rel="noopener noreferrer">
+              Apply to Network School
+            </a>
           </div>
           <div className={styles.heroArt}>
             <HeroArtImage />
@@ -84,21 +83,8 @@ export default function Home() {
         </section>
 
         <section className={styles.section}>
-          <h2>Partner Outcomes</h2>
-          <div className={styles.cards}>
-            <article id="sponsor" className={styles.card}>
-              <h3>Sponsor Builders</h3>
-              <p>Bring teams and support scholars while connecting with high-agency builders during our Genesis residency.</p>
-            </article>
-            <article id="teach" className={styles.card}>
-              <h3>Teach Your Tech Stack</h3>
-              <p>Host hands on workshops, from a primer to a deep dive, fully aligned to your roadmap and work directly with builders who are ready to ship.</p>
-            </article>
-            <article id="host" className={styles.card}>
-              <h3>Host a Hackathon or Social</h3>
-              <p>Run an on-site build sprint or social event with on-the-ground support and a curated community.</p>
-            </article>
-          </div>
+          <h2>Participation Outcomes</h2>
+          <ParticipationOutcomesTabs />
         </section>
 
         <section className={styles.section}>
@@ -107,22 +93,6 @@ export default function Home() {
             <li>Your team hosts workshops or builder lock-ins in May.</li>
             <li>You promote the event in your ecosystem, and sponsor builders to come as scholars.</li>
             <li>Optionally, we help you host social events, or run your own hackathon challenge.</li>
-          </ul>
-        </section>
-
-        <section className={styles.section}>
-          <h2>Participant Experience</h2>
-          <ul className={styles.list}>
-            <li>
-              25% discounted monthly stay via{" "}
-              <a href="https://ns.com/ethns/invite" target="_blank" rel="noopener noreferrer">
-                ETH NS referral
-              </a>
-              , starting at $1125.
-            </li>
-            <li>Access to all programming, mentorship, and workshop infrastructure.</li>
-            <li>24/7 co-working and gym, fitness sessions, healthy meals, and serviced rooms.</li>
-            <li>500+ community members and direct ecosystem exposure.</li>
           </ul>
         </section>
 
@@ -153,15 +123,16 @@ export default function Home() {
         </section>
 
         <section className={styles.section}>
-          <h2>May 2026 Logistics</h2>
+          <h2>General Logistics Overview</h2>
           <p>
             Ethereum NS runs throughout May 2026 at Network School. Teams and builders joining
-            through the referral flow receive 25% pricing support and full residency access.
+            through the referral flow receive 25% pricing support and full residency access. Full
+            details for logistics are provided by Network School directly upon acceptance.
           </p>
         </section>
 
         <section className={styles.section}>
-          <h2>Sponsor FAQ</h2>
+          <h2>FAQ</h2>
           <SponsorFaq />
         </section>
       </main>
