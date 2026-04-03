@@ -162,6 +162,15 @@ const tabs = [
             diversity, and a shared founder mindset.
           </p>
         </article>
+        <details className={`${styles.card} ${styles.outcomesSubCard} ${styles.outcomesDetails}`} open>
+          <summary className={styles.outcomesSummary}>Where can I learn more about Teams at NS?</summary>
+          <p>
+            Network School&apos;s website has a fully dedicated page to teams where you can learn more about the first hand experience of teams based at NS. Here's the link:{" "}
+            <a href="https://ns.com/teams" target="_blank" rel="noopener noreferrer">
+              ns.com/teams
+            </a>
+          </p>
+        </details>
       </div>
     ),
   },
