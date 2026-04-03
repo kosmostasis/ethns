@@ -90,7 +90,7 @@ export default function Home() {
         <section className={styles.section}>
           <h2>FAQ</h2>
           <div className={styles.faq}>
-            <details className={styles.faqItem} open>
+            <details className={styles.faqItem}>
               <summary className={styles.faqQuestion}>General Logistics Overview</summary>
               <p className={styles.faqAnswer}>
                 Ethereum NS runs throughout May 2026 at Network School. Teams and builders joining
