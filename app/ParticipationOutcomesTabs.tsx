@@ -60,7 +60,7 @@ const tabs = [
             </div>
           ))}
         </div>
-        <details className={`${styles.card} ${styles.outcomesSubCard} ${styles.outcomesDetails}`} open>
+        <details className={`${styles.card} ${styles.outcomesSubCard} ${styles.outcomesDetails}`}>
           <summary className={styles.outcomesSummary}>How is life at Network School?</summary>
           <p>
             You can find many more details directly on Network School's{" "}
@@ -103,7 +103,7 @@ const tabs = [
             <h3>Host a Hackathon or Social</h3>
             <p>Run an on-site build sprint or social event with on-the-ground support and a curated community.</p>
           </article>
-          <details className={`${styles.card} ${styles.outcomesSubCard} ${styles.outcomesDetails}`} open>
+          <details className={`${styles.card} ${styles.outcomesSubCard} ${styles.outcomesDetails}`}>
             <summary className={styles.outcomesSummary}>
               What do we need to do to be considered partners? Any combination of these actions
               qualifies you <span className={styles.outcomesSummaryEmoji}>👇</span>
@@ -184,7 +184,7 @@ const tabs = [
             diversity, and a shared founder mindset.
           </p>
         </article>
-        <details className={`${styles.card} ${styles.outcomesSubCard} ${styles.outcomesDetails}`} open>
+        <details className={`${styles.card} ${styles.outcomesSubCard} ${styles.outcomesDetails}`}>
           <summary className={styles.outcomesSummary}>Where can I learn more about Teams at NS?</summary>
           <p>
             Network School&apos;s website has a fully dedicated page to teams where you can learn more about the first hand experience of teams based at NS. Here's the link:{" "}
