@@ -60,6 +60,28 @@ const tabs = [
             </div>
           ))}
         </div>
+        <details className={`${styles.card} ${styles.outcomesSubCard} ${styles.outcomesDetails}`} open>
+          <summary className={styles.outcomesSummary}>How is life at Network School?</summary>
+          <p>
+            You can find many more details directly on Network School's{" "}
+            <a href="https://ns.com/" target="_blank" rel="noopener noreferrer">
+              website
+            </a>
+            ,{" "}
+            <a
+              href="https://www.instagram.com/networkschool/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram
+            </a>
+            , and{" "}
+            <a href="https://x.com/ns" target="_blank" rel="noopener noreferrer">
+              X
+            </a>{" "}
+            profiles.
+          </p>
+        </details>
       </div>
     ),
   },
