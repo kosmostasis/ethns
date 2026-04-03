@@ -328,6 +328,18 @@
   padding: 0 1rem 1rem;
 }
 
+.outcomesDetails p {
+  margin: 0;
+  padding: 0 1rem 1rem;
+  font-size: 0.95rem;
+}
+
+.outcomesDetails a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .outcomesEveryone {
   display: grid;
   gap: 0.85rem;
