@@ -106,7 +106,7 @@ export default function Home() {
       <footer className={styles.footer}>
         <p>
           Built with ❤️ at{" "}
-          <a href={links.nsAbout} target="_blank" rel="noopener noreferrer" aria-label="Network School">
+          <a href={links.nsHome} target="_blank" rel="noopener noreferrer" aria-label="Network School">
             <Image
               src="https://assets.ns.com/static/about/network-state-and-network-school-logos/network-state-plus-flag-logos/network-state-plus-flag-logo-black.svg"
               alt=""
