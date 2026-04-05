@@ -67,6 +67,13 @@
   height: 20px;
 }
 
+.brandTitleImage {
+  width: 28px;
+  height: 28px;
+  display: block;
+  object-fit: contain;
+}
+
 .nav {
   display: flex;
   gap: 1rem;
