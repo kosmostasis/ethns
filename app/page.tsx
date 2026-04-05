@@ -1,5 +1,6 @@
 import Image from "next/image";
 import HeroArtImage from "./HeroArtImage";
+import HeroVideo from "./HeroVideo";
 import ParticipationOutcomesTabs from "./ParticipationOutcomesTabs";
 import SponsorFaq from "./SponsorFaq";
 import styles from "./page.module.css";
@@ -17,6 +18,8 @@ const links = {
     "https://etherscan.io/tx/0x5dd574df963a1df1f064791e0f6ff41ec972cdbba12293b7e1ece582052ba855",
   hackmdOutreach: "https://hackmd.io/@kosmostasis/ETHNSoutreach",
   ethereumAssets: "https://ethereum.org/assets/",
+  heroVideo:
+    "https://nlih1yfzfj0mv0ji.public.blob.vercel-storage.com/videos/ethns-hero",
 } as const;
 
 export default function Home() {
@@ -81,6 +84,8 @@ export default function Home() {
             <HeroArtImage />
           </div>
         </section>
+
+        <HeroVideo src={links.heroVideo} />
 
         <section className={styles.section}>
           <h2>Participation Outcomes</h2>
