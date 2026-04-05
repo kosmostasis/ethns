@@ -79,6 +79,9 @@ export default function Home() {
             <a className={styles.secondaryCta} href={links.applyInvite} target="_blank" rel="noopener noreferrer">
               Apply to Network School
             </a>
+            <a className={styles.secondaryCta} href="#participation-outcomes">
+              Learn More
+            </a>
           </div>
           <div className={styles.heroArt}>
             <HeroArtImage />
@@ -87,7 +90,7 @@ export default function Home() {
 
         <HeroVideo src={links.heroVideo} />
 
-        <section className={styles.section}>
+        <section id="participation-outcomes" className={styles.section}>
           <h2>Participation Outcomes</h2>
           <ParticipationOutcomesTabs />
         </section>
