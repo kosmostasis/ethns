@@ -8,6 +8,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: [{ url: "/icon.png", type: "image/png", sizes: "512x512" }],
+    apple: [{ url: "/icon.png", type: "image/png", sizes: "512x512" }],
+  },
   title: "Ethereum NS at Network School | May 2026",
   description:
     "A one-month Ethereum residency at Network School for workshops, builder lock-ins, and ecosystem hackathons.",
