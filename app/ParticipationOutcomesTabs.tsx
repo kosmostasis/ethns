@@ -63,7 +63,8 @@ const tabs = [
         <details className={`${styles.card} ${styles.outcomesSubCard} ${styles.outcomesDetails}`}>
           <summary className={styles.outcomesSummary}>How is life at Network School?</summary>
           <p>
-            You can find many more details directly on Network School's{" "}
+            You can catch a glimpse on the video above and for more details you can explore directly on Network
+            School&apos;s{" "}
             <a href="https://ns.com/" target="_blank" rel="noopener noreferrer">
               website
             </a>
