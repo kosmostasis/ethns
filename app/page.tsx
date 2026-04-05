@@ -51,8 +51,14 @@ export default function Home() {
                 />
               </a>
             </span>
-            <a href={links.nsEthns} target="_blank" rel="noopener noreferrer">
-              ETH NS
+            <a href={links.nsEthns} target="_blank" rel="noopener noreferrer" aria-label="Ethereum NS">
+              <Image
+                src="/ethns-header-mark.png"
+                alt=""
+                width={64}
+                height={64}
+                className={styles.brandTitleImage}
+              />
             </a>
           </span>
         </div>
