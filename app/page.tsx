@@ -5,6 +5,9 @@ import ParticipationOutcomesTabs from "./ParticipationOutcomesTabs";
 import SponsorFaq from "./SponsorFaq";
 import styles from "./page.module.css";
 
+const defaultHeroVideo =
+  "https://pub-a8a14f1d39cd4a74ba46165ef523cad4.r2.dev/static/video/ETHEREUM%20NETWORK%20STATE%20FINAL%20NEW%20(2).mp4";
+
 const links = {
   quickSync: "https://app.reclaim.ai/m/kosmostasis/flexible-meeting",
   applyInvite: "https://ns.com/ethns/invite",
@@ -18,9 +21,9 @@ const links = {
     "https://etherscan.io/tx/0x5dd574df963a1df1f064791e0f6ff41ec972cdbba12293b7e1ece582052ba855",
   hackmdOutreach: "https://hackmd.io/@kosmostasis/ETHNSoutreach",
   ethereumAssets: "https://ethereum.org/assets/",
-  heroVideo:
-    "https://nlih1yfzfj0mv0ji.public.blob.vercel-storage.com/videos/ethns-hero",
 } as const;
+
+const heroVideoSrc = process.env.NEXT_PUBLIC_HERO_VIDEO_URL ?? defaultHeroVideo;
 
 export default function Home() {
   return (
@@ -88,7 +91,7 @@ export default function Home() {
           </div>
         </section>
 
-        <HeroVideo src={links.heroVideo} />
+        <HeroVideo src={heroVideoSrc} />
 
         <section id="participation-outcomes" className={styles.section}>
           <h2>Participation Outcomes</h2>
