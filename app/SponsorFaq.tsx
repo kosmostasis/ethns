@@ -13,7 +13,7 @@ const items: FaqItem[] = [
   {
     question: "Do we need to be crypto-native and building on Ethereum?",
     answer:
-      "No. NS provides a wide-scope range of programming, from AI to biotech, and you are welcome to join any events permissionlessly. Regardless, you'll make the most of the Ethereum focused and related programming if you are an independent builder or team committed to Ethereum-aligned development, regardless of maturity stage.",
+      "No. NS provides a wide-scope range of programming, from AI to biotech, and you are welcome to join any events permissionlessly. Regardless, you'll make the most of the Ethereum-focused programming and related events if you are an independent builder or team committed to Ethereum-aligned development, regardless of maturity stage.",
   },
   {
     question: "Is access open to anyone?",
@@ -46,7 +46,7 @@ const items: FaqItem[] = [
           WhatsApp
         </a>
         ,{" "}
-        <a href="mailto:kossmostasis@gmail.com">Email</a>).
+        <a href="mailto:koss@ethns.io">Email</a>).
       </>
     ),
   },
@@ -80,7 +80,7 @@ const items: FaqItem[] = [
             <a href="https://luma.com/ethns" target="_blank" rel="noopener noreferrer">
               ETH NS calendar
             </a>
-            . Below you can find a draft of how it might look like.
+            . Below you can find a draft of what the month might look like.
         <div className={styles.calendarMockup}>
           <p className={styles.calendarTitle}>ETH NS Draft Calendar (WIP)</p>
           <p className={styles.calendarLegend}>
@@ -273,8 +273,8 @@ const items: FaqItem[] = [
         <a href="https://ns.com/zcash" target="_blank" rel="noopener noreferrer">
           Zcash Hackathon
         </a>{" "}
-        for a complete overview. There&apos;re many more challenges of different scopes and nature
-        on any given month.
+        for a complete overview. There are many more challenges of different scopes and types
+        in any given month.
       </>
     ),
   },
