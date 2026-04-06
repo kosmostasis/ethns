@@ -98,7 +98,9 @@ const tabs = [
           </article>
           <article id="teach" className={styles.card}>
             <h3>Teach Your Tech Stack</h3>
-            <p>Host hands on workshops, from a primer to a deep dive, fully aligned to your roadmap and work directly with builders who are ready to ship.</p>
+            <p>
+              Host hands-on workshops, from primers to deep dives, aligned with your roadmap, and work directly with builders who are ready to ship.
+            </p>
           </article>
           <article id="host" className={styles.card}>
             <h3>Host a Hackathon or Social</h3>
@@ -106,15 +108,15 @@ const tabs = [
           </article>
           <details className={`${styles.card} ${styles.outcomesSubCard} ${styles.outcomesDetails}`}>
             <summary className={styles.outcomesSummary}>
-              What do we need to do to be considered partners? Any combination of these actions
-              qualifies you <span className={styles.outcomesSummaryEmoji}>👇</span>
+              What do we need to do to be considered a partner? Any combination of the actions
+              below can qualify your team. <span className={styles.outcomesSummaryEmoji}>👇</span>
             </summary>
             <ul className={styles.list}>
-              <li>Your team hosts workshops or builder lock-ins in May.</li>
-              <li>You promote the event in your ecosystem, and sponsor builders to come as scholars.</li>
-              <li>Optionally, we help you host social events, or run your own hackathon challenge.</li>
+              <li>Hosts workshops or builder lock-ins in May.</li>
+              <li>Promote the event in your ecosystem, and sponsor builders to attend as scholars.</li>
+              <li>Optionally, host a social event or sponsor a hackathon bounty.</li>
               <li>
-                Something else comes to mind? Please{" "}
+                Have another idea? Please{" "}
                 <a
                   href="https://app.reclaim.ai/m/kosmostasis/flexible-meeting"
                   target="_blank"
@@ -122,7 +124,7 @@ const tabs = [
                 >
                   book a quick sync
                 </a>{" "}
-                with our team to discuss your ideas.
+                with our team.
               </li>
             </ul>
           </details>
