@@ -8,6 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ns.com/ethns"),
   icons: {
     icon: [{ url: "/icon.png", type: "image/png", sizes: "512x512" }],
     apple: [{ url: "/icon.png", type: "image/png", sizes: "512x512" }],
@@ -22,6 +23,14 @@ export const metadata: Metadata = {
     url: "https://ns.com/ethns",
     siteName: "Ethereum NS",
     type: "website",
+    images: [{ url: "/opengraph-image.jpg", width: 1024, height: 640, alt: "Ethereum Network State at Network School" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ethereum NS at Network School | May 2026",
+    description:
+      "Partner with Ethereum NS to sponsor builders, teach workshops, or host a hackathon in May 2026.",
+    images: ["/opengraph-image.jpg"],
   },
 };
 
