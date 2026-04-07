@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     url: "https://ns.com/ethns",
     siteName: "Ethereum NS",
     type: "website",
-    images: [{ url: "/opengraph-image.jpg", width: 1024, height: 640, alt: "Ethereum Network State at Network School" }],
+    images: [{ url: "/opengraph-image.jpg", width: 1024, height: 576, alt: "Ethereum Network State at Network School" }],
   },
   twitter: {
     card: "summary_large_image",
