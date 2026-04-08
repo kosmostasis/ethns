@@ -69,6 +69,11 @@ const items: FaqItem[] = [
     ),
   },
   {
+    question: "Can I partner with Ethereum NS only in May or anytime during the year?",
+    answer:
+      "Yes, you can partner with ETH NS anytime. We are committed to host Ethereum-related programming permanently at Network School, and we can co-organize tailored programming for your ecosystem and community.",
+  },
+  {
     question: "What's the programming for May going to be like?",
     answerNode: (
       <>
