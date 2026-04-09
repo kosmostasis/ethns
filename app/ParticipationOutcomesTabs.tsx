@@ -108,9 +108,10 @@ const tabs = [
           </article>
           <details className={`${styles.card} ${styles.outcomesSubCard} ${styles.outcomesDetails}`}>
             <summary className={styles.outcomesSummary}>
-              What do we need to do to be considered a partner? Any combination of the actions
-              below can qualify your team. <span className={styles.outcomesSummaryEmoji}>👇</span>
+              What do we need to do to be considered a partner?
+              <span className={styles.outcomesSummaryEmoji}>👇</span>
             </summary>
+            <p>Any combination of the actions below can qualify your team:</p>
             <ul className={styles.list}>
               <li>Hosts workshops or builder lock-ins in May.</li>
               <li>Promote the event in your ecosystem, and sponsor builders to attend as scholars.</li>
