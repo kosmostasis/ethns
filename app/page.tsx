@@ -1,5 +1,7 @@
 import Image from "next/image";
+import type { CSSProperties } from "react";
 import HeroArtImage from "./HeroArtImage";
+import MarqueeLoopController from "./MarqueeLoopController";
 import HeroVideo from "./HeroVideo";
 import ParticipationOutcomesTabs from "./ParticipationOutcomesTabs";
 import SponsorFaq from "./SponsorFaq";
@@ -22,6 +24,38 @@ const links = {
   hackmdOutreach: "https://hackmd.io/@kosmostasis/ETHNSoutreach",
   ethereumAssets: "https://ethereum.org/assets/",
 } as const;
+
+const partnerLogos = [
+  {
+    name: "Network School",
+    href: "https://ns.com",
+    src: "/logo-network-school.svg",
+    width: 265,
+    height: 32,
+  },
+  {
+    name: "Base",
+    href: "https://base.org",
+    src: "/logo-base.svg",
+    width: 88,
+    height: 88,
+  },
+  {
+    name: "Invisible Garden",
+    href: "https://invisible.garden",
+    src: "/logo-invisible-garden.png",
+    width: 578,
+    height: 209,
+  },
+  {
+    name: "Seapunk",
+    href: "https://seapunk.asia",
+    src: "/logo-seapunk.png",
+    width: 500,
+    height: 500,
+    scale: 1.50,
+  },
+] as const;
 
 const heroVideoSrc = process.env.NEXT_PUBLIC_HERO_VIDEO_URL ?? defaultHeroVideo;
 
@@ -100,6 +134,35 @@ export default function Home() {
         <section id="participation-outcomes" className={styles.section}>
           <h2>Participation Outcomes</h2>
           <ParticipationOutcomesTabs />
+        </section>
+
+        <section className={styles.logoMarqueeSection} aria-label="Partner logos">
+          <MarqueeLoopController
+            trackSelector={`.${styles.logoMarqueeTrack}`}
+            itemSelector={`.${styles.logoMarqueeItem}`}
+          />
+          <div className={styles.logoMarqueeTrack} data-marquee-ready="false">
+            {[...partnerLogos, ...partnerLogos].map((logo, index) => (
+              <a
+                key={`${logo.name}-${index}`}
+                href={logo.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={logo.name}
+                className={styles.logoMarqueeItem}
+                data-logo-name={logo.name}
+              >
+                <Image
+                  src={logo.src}
+                  alt={logo.name}
+                  width={logo.width}
+                  height={logo.height}
+                  className={styles.logoMarqueeImage}
+                  style={{ "--logo-scale": "scale" in logo ? logo.scale : 1 } as CSSProperties}
+                />
+              </a>
+            ))}
+          </div>
         </section>
 
         <section className={styles.section}>
