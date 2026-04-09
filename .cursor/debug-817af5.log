@@ -1,1 +1,0 @@
-{"sessionId":"817af5","runId":"run1","hypothesisId":"H5-H7","location":"app/MarqueeLoopController.tsx:useEffect","message":"Measured marquee travel distance","data":{"itemCount":8,"firstHalfCount":4,"travelPx":824,"trackScrollWidth":1632,"gapPx":"15.2px","animationDuration":"26s"},"timestamp":1775726148112}
