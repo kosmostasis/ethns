@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { CSSProperties } from "react";
 import HeroArtImage from "./HeroArtImage";
 import MarqueeLoopController from "./MarqueeLoopController";
+import OgMetaDebug from "./OgMetaDebug";
 import HeroVideo from "./HeroVideo";
 import ParticipationOutcomesTabs from "./ParticipationOutcomesTabs";
 import SponsorFaq from "./SponsorFaq";
@@ -102,6 +103,7 @@ export default function Home() {
       </header>
 
       <main>
+        <OgMetaDebug />
         <section className={styles.hero}>
           <p className={styles.eyebrow}>May 2026: Genesis Block Month</p>
           <h1>
