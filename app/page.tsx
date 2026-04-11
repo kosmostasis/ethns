@@ -1,7 +1,6 @@
 import Image from "next/image";
-import type { CSSProperties } from "react";
 import HeroArtImage from "./HeroArtImage";
-import MarqueeLoopController from "./MarqueeLoopController";
+import LogoMarquee from "./LogoMarquee";
 import HeroVideo from "./HeroVideo";
 import ParticipationOutcomesTabs from "./ParticipationOutcomesTabs";
 import SponsorFaq from "./SponsorFaq";
@@ -53,7 +52,7 @@ const partnerLogos = [
     src: "/logo-seapunk.png",
     width: 500,
     height: 500,
-    scale: 1.50,
+    scale: 1.75,
   },
 ] as const;
 
@@ -136,34 +135,7 @@ export default function Home() {
           <ParticipationOutcomesTabs />
         </section>
 
-        <section className={styles.logoMarqueeSection} aria-label="Partner logos">
-          <MarqueeLoopController
-            trackSelector={`.${styles.logoMarqueeTrack}`}
-            itemSelector={`.${styles.logoMarqueeItem}`}
-          />
-          <div className={styles.logoMarqueeTrack} data-marquee-ready="false">
-            {[...partnerLogos, ...partnerLogos].map((logo, index) => (
-              <a
-                key={`${logo.name}-${index}`}
-                href={logo.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={logo.name}
-                className={styles.logoMarqueeItem}
-                data-logo-name={logo.name}
-              >
-                <Image
-                  src={logo.src}
-                  alt={logo.name}
-                  width={logo.width}
-                  height={logo.height}
-                  className={styles.logoMarqueeImage}
-                  style={{ "--logo-scale": "scale" in logo ? logo.scale : 1 } as CSSProperties}
-                />
-              </a>
-            ))}
-          </div>
-        </section>
+        <LogoMarquee logos={partnerLogos} direction="left" entrance />
 
         <section className={styles.section}>
           <h2>FAQ</h2>
