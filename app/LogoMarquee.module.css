@@ -1,0 +1,160 @@
+/* Duplicated belt: two identical halves in one flex row. Animating translate3d by -50% of the
+   belt's total width moves exactly one copy—pixels need not be measured at runtime, so layout
+   shifts cannot desync the loop distance (unlike a JS-measured --marquee-travel-px loop). */
+
+.logoMarqueeSection {
+  --marquee-gap: 0.95rem;
+  /* Duration: optional inline --marquee-user-duration / --marquee-user-duration-mobile override these */
+  --marquee-duration: var(--marquee-user-duration, 34s);
+  width: 100%;
+  max-width: 100%;
+  margin: 2.25rem 0;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.logoMarqueeSection::before,
+.logoMarqueeSection::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: clamp(5rem, 16vw, 10rem);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.logoMarqueeSection::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg) 0%, rgba(245, 245, 248, 0) 100%);
+}
+
+.logoMarqueeSection::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg) 0%, rgba(245, 245, 248, 0) 100%);
+}
+
+.marqueeMask {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* One-time shell: moves the whole belt from the right into place. Independent timeline from the
+   infinite belt transform so the loop math stays a pure ±50% cycle with no handoff snap. */
+.marqueeEntrance {
+  transform: translate3d(0, 0, 0);
+}
+
+.marqueeEntrance[data-entrance="on"] {
+  animation: marqueeEnterFromRight var(--marquee-entrance-duration, 720ms) ease-out forwards;
+}
+
+.marqueeBelt {
+  display: flex;
+  align-items: center;
+  gap: var(--marquee-gap);
+  width: max-content;
+  will-change: transform;
+  z-index: 1;
+}
+
+/* Loop starts after optional entrance so the first frame of the infinite cycle is not fighting the entrance transform */
+.marqueeBelt[data-loop-delay="on"] {
+  animation-delay: var(--marquee-loop-delay, 0ms);
+}
+
+.marqueeBelt[data-direction="left"] {
+  animation: marqueeBeltLeft var(--marquee-duration) linear infinite;
+}
+
+.marqueeBelt[data-direction="right"] {
+  animation: marqueeBeltRight var(--marquee-duration) linear infinite;
+}
+
+.logoMarqueeSection:hover .marqueeBelt,
+.logoMarqueeSection:focus-within .marqueeBelt {
+  animation-play-state: paused;
+}
+
+.logoMarqueeItem {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(2.6rem * 1.75);
+  opacity: 0.94;
+  transition: opacity 0.2s ease;
+}
+
+.logoMarqueeItem:hover {
+  opacity: 1;
+}
+
+.logoMarqueeImage {
+  display: block;
+  width: auto;
+  height: calc(2.6rem * var(--logo-scale, 1));
+  object-fit: contain;
+}
+
+@keyframes marqueeEnterFromRight {
+  from {
+    transform: translate3d(clamp(1.5rem, 8vw, 10rem), 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes marqueeBeltLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marqueeBeltRight {
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (max-width: 640px) {
+  .logoMarqueeSection {
+    --marquee-gap: 0.8rem;
+    --marquee-duration: var(--marquee-user-duration-mobile, var(--marquee-user-duration, 18s));
+  }
+
+  .logoMarqueeImage {
+    height: 2.1rem;
+  }
+
+  .logoMarqueeItem {
+    min-height: calc(2.1rem * 1.75);
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 641px) {
+  .logoMarqueeSection {
+    --marquee-duration: var(--marquee-user-duration-tablet, var(--marquee-user-duration, 26s));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marqueeEntrance[data-entrance="on"] {
+    animation: none;
+  }
+
+  .marqueeBelt[data-direction="left"],
+  .marqueeBelt[data-direction="right"] {
+    animation: none;
+    transform: translate3d(0, 0, 0);
+  }
+}
