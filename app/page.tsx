@@ -22,6 +22,7 @@ const links = {
     "https://etherscan.io/tx/0x5dd574df963a1df1f064791e0f6ff41ec972cdbba12293b7e1ece582052ba855",
   hackmdOutreach: "https://hackmd.io/@kosmostasis/ETHNSoutreach",
   ethereumAssets: "https://ethereum.org/assets/",
+  lumaCalendar: "https://luma.com/ethns",
 } as const;
 
 const partnerLogos = [
@@ -94,7 +95,7 @@ export default function Home() {
           </span>
         </div>
         <nav className={styles.nav}>
-          <a href="https://luma.com/ethns" target="_blank" rel="noopener noreferrer" aria-label="Luma">
+          <a href={links.lumaCalendar} target="_blank" rel="noopener noreferrer" aria-label="Luma">
             <Image src="/calendar-icon.svg" alt="" width={20} height={20} className={styles.navIcon} />
           </a>
         </nav>
@@ -121,6 +122,14 @@ export default function Home() {
             </a>
             <a className={styles.secondaryCta} href="#participation-outcomes">
               Learn More
+            </a>
+            <a
+              className={styles.secondaryCta}
+              href={links.lumaCalendar}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Calendar
             </a>
           </div>
           <div className={styles.heroArt}>
