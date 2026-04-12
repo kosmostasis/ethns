@@ -30,7 +30,7 @@ const items: FaqItem[] = [
     answerNode: (
       <>
         Yes. You can contact Koss over your preferred channel (
-        <a href="http://t.me/kosmostasis" target="_blank" rel="noopener noreferrer">
+        <a href="https://t.me/kosmostasis" target="_blank" rel="noopener noreferrer">
           Telegram
         </a>
         ,{" "}

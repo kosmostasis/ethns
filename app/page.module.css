@@ -19,7 +19,8 @@
 .header,
 .hero,
 .section,
-.footer {
+.footer,
+.partnerLogoStack {
   width: min(1080px, calc(100% - 2.5rem));
   margin-inline: auto;
 }
@@ -54,13 +55,14 @@
 }
 
 .brandLogo {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
 .brandTitleImage {
-  width: 28px;
-  height: 28px;
+  width: 24px;
+  height: 24px;
   display: block;
   object-fit: contain;
 }
@@ -197,6 +199,10 @@
 }
 
 
+.partnerLogoStack > :global(section:first-of-type) {
+  margin-bottom: 0.65rem;
+}
+
 .heroVideoStrip {
   width: 100%;
   margin-top: 2rem;
@@ -274,84 +280,6 @@
   padding: 0.1em 0.35em;
   border-radius: 4px;
   background: rgba(255, 255, 255, 0.08);
-}
-
-.logoMarqueeSection {
-  --marquee-gap: 0.95rem;
-  --marquee-duration: 34s;
-  width: 100%;
-  margin: 2.25rem 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.logoMarqueeSection::before,
-.logoMarqueeSection::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: clamp(5rem, 16vw, 10rem);
-  pointer-events: none;
-  z-index: 2;
-}
-
-.logoMarqueeSection::before {
-  left: 0;
-  background: linear-gradient(to right, var(--bg) 0%, rgba(245, 245, 248, 0) 100%);
-}
-
-.logoMarqueeSection::after {
-  right: 0;
-  background: linear-gradient(to left, var(--bg) 0%, rgba(245, 245, 248, 0) 100%);
-}
-
-.logoMarqueeTrack {
-  display: flex;
-  align-items: center;
-  gap: var(--marquee-gap);
-  width: max-content;
-  animation: logoMarquee var(--marquee-duration) linear infinite;
-  will-change: transform;
-  z-index: 1;
-}
-
-.logoMarqueeTrack[data-marquee-ready="false"] {
-  animation-play-state: paused;
-}
-
-.logoMarqueeSection:hover .logoMarqueeTrack,
-.logoMarqueeSection:focus-within .logoMarqueeTrack {
-  animation-play-state: paused;
-}
-
-.logoMarqueeItem {
-  flex: 0 0 auto;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0.94;
-  transition: opacity 0.2s ease;
-}
-
-.logoMarqueeItem:hover {
-  opacity: 1;
-}
-
-.logoMarqueeImage {
-  display: block;
-  width: auto;
-  height: calc(2.6rem * var(--logo-scale, 1));
-  object-fit: contain;
-}
-
-@keyframes logoMarquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(calc(-1 * var(--marquee-travel-px, 50%)));
-  }
 }
 
 .section {
@@ -784,7 +712,8 @@
   .header,
   .hero,
   .section,
-  .footer {
+  .footer,
+  .partnerLogoStack {
     width: min(1080px, calc(100% - 1.25rem));
   }
 
@@ -793,28 +722,8 @@
     flex-direction: row;
   }
 
-  .logoMarqueeSection {
-    --marquee-gap: 0.8rem;
-    --marquee-duration: 18s;
-  }
-
   .heroImageFrame {
     aspect-ratio: 16 / 11;
   }
 
-  .logoMarqueeImage {
-    height: 2.1rem;
-  }
-}
-
-@media (max-width: 1024px) and (min-width: 641px) {
-  .logoMarqueeSection {
-    --marquee-duration: 26s;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .logoMarqueeTrack {
-    animation: none;
-  }
 }

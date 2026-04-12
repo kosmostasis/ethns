@@ -1,7 +1,6 @@
 import Image from "next/image";
-import type { CSSProperties } from "react";
 import HeroArtImage from "./HeroArtImage";
-import MarqueeLoopController from "./MarqueeLoopController";
+import LogoMarquee from "./LogoMarquee";
 import HeroVideo from "./HeroVideo";
 import ParticipationOutcomesTabs from "./ParticipationOutcomesTabs";
 import SponsorFaq from "./SponsorFaq";
@@ -23,6 +22,7 @@ const links = {
     "https://etherscan.io/tx/0x5dd574df963a1df1f064791e0f6ff41ec972cdbba12293b7e1ece582052ba855",
   hackmdOutreach: "https://hackmd.io/@kosmostasis/ETHNSoutreach",
   ethereumAssets: "https://ethereum.org/assets/",
+  lumaCalendar: "https://luma.com/ethns",
 } as const;
 
 const partnerLogos = [
@@ -34,13 +34,6 @@ const partnerLogos = [
     height: 32,
   },
   {
-    name: "Base",
-    href: "https://base.org",
-    src: "/logo-base.svg",
-    width: 88,
-    height: 88,
-  },
-  {
     name: "Invisible Garden",
     href: "https://invisible.garden",
     src: "/logo-invisible-garden.png",
@@ -48,12 +41,139 @@ const partnerLogos = [
     height: 209,
   },
   {
+    name: "Base",
+    href: "https://base.org",
+    src: "/logo-base.svg",
+    width: 88,
+    height: 88,
+  },
+  {
     name: "Seapunk",
     href: "https://seapunk.asia",
     src: "/logo-seapunk.png",
     width: 500,
     height: 500,
-    scale: 1.50,
+    scale: 1.75,
+  },
+] as const;
+
+const communityLogos = [
+  {
+    name: "Kernel",
+    href: "https://kernel.community/",
+    src: "https://www.kernel.community/logos/KernelLogo.svg",
+    width: 392,
+    height: 126,
+  },
+  {
+    name: "SUCI",
+    href: "https://www.suci.io/",
+    src: "/logos-community/suci-logotype.png",
+    width: 1024,
+    height: 505,
+    unoptimized: true,
+  },
+  {
+    name: "Privote",
+    href: "https://privote.live/",
+    src: "/logos-community/privote.svg",
+    width: 662,
+    height: 662,
+  },
+  {
+    name: "Fracton Ventures",
+    href: "https://fracton.ventures/",
+    src: "/logos-community/fracton.png",
+    width: 2285,
+    height: 764,
+  },
+  {
+    name: "RegistryChain",
+    href: "https://registrychain.com/",
+    src: "/logos-community/registrychain.png",
+    width: 5216,
+    height: 1768,
+  },
+  {
+    name: "ETHKL",
+    href: "https://www.ethkl.org/",
+    src: "/logos-community/ethkl.png",
+    width: 93,
+    height: 36,
+  },
+  {
+    name: "Metropolis",
+    href: "https://metropolisglobal.com/",
+    src: "/logos-community/metropolis.png",
+    width: 768,
+    height: 173,
+  },
+  {
+    name: "CrossBar",
+    href: "https://www.crossbar-inc.com/",
+    src: "/logos-community/crossbar.svg",
+    width: 1182,
+    height: 549,
+  },
+  {
+    name: "muShanghai",
+    href: "https://mushanghai.xyz/",
+    src: "/logos-community/mushanghai.png",
+    width: 256,
+    height: 80,
+  },
+  {
+    name: "Hubs Network",
+    href: "https://www.hubsnetwork.org/",
+    src: "/logos-community/hubsnetwork.png",
+    width: 1127,
+    height: 349,
+  },
+  {
+    name: "FIL Builders",
+    href: "https://fil.builders/",
+    src: "/logos-community/fil-builders.ico",
+    width: 253,
+    height: 256,
+  },
+  {
+    name: "Swarm",
+    href: "https://www.ethswarm.org/",
+    src: "/logos-community/swarm-horizontal.png",
+    width: 1024,
+    height: 270,
+    unoptimized: true,
+  },
+  {
+    name: "AyaHQ",
+    href: "https://www.ayahq.com/",
+    src: "/logos-community/ayahq.png",
+    width: 132,
+    height: 52,
+    invert: true,
+  },
+  {
+    name: "Commons Hub",
+    href: "https://www.commons-hub.at/",
+    src: "https://www.commons-hub.at/favicon.ico",
+    width: 2084,
+    height: 2084,
+    unoptimized: true,
+  },
+  {
+    name: "ETHPadThai",
+    href: "https://ethpadthai.org/",
+    src: "/logos-community/ethpadthai.png",
+    width: 1023,
+    height: 1024,
+  },
+  {
+    name: "Web3Privacy",
+    href: "https://web3privacy.info/",
+    src: "/logos-community/web3privacy.svg",
+    width: 236,
+    height: 64,
+    invert: true,
   },
 ] as const;
 
@@ -95,7 +215,7 @@ export default function Home() {
           </span>
         </div>
         <nav className={styles.nav}>
-          <a href="https://luma.com/ethns" target="_blank" rel="noopener noreferrer" aria-label="Luma">
+          <a href={links.lumaCalendar} target="_blank" rel="noopener noreferrer" aria-label="Luma">
             <Image src="/calendar-icon.svg" alt="" width={20} height={20} className={styles.navIcon} />
           </a>
         </nav>
@@ -123,6 +243,14 @@ export default function Home() {
             <a className={styles.secondaryCta} href="#participation-outcomes">
               Learn More
             </a>
+            <a
+              className={styles.secondaryCta}
+              href={links.lumaCalendar}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Calendar
+            </a>
           </div>
           <div className={styles.heroArt}>
             <HeroArtImage />
@@ -136,34 +264,15 @@ export default function Home() {
           <ParticipationOutcomesTabs />
         </section>
 
-        <section className={styles.logoMarqueeSection} aria-label="Partner logos">
-          <MarqueeLoopController
-            trackSelector={`.${styles.logoMarqueeTrack}`}
-            itemSelector={`.${styles.logoMarqueeItem}`}
+        <div className={styles.partnerLogoStack}>
+          <LogoMarquee logos={partnerLogos} static />
+          <LogoMarquee
+            logos={communityLogos}
+            static
+            visualWeight="subtle"
+            aria-label="Community and ecosystem logos"
           />
-          <div className={styles.logoMarqueeTrack} data-marquee-ready="false">
-            {[...partnerLogos, ...partnerLogos].map((logo, index) => (
-              <a
-                key={`${logo.name}-${index}`}
-                href={logo.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={logo.name}
-                className={styles.logoMarqueeItem}
-                data-logo-name={logo.name}
-              >
-                <Image
-                  src={logo.src}
-                  alt={logo.name}
-                  width={logo.width}
-                  height={logo.height}
-                  className={styles.logoMarqueeImage}
-                  style={{ "--logo-scale": "scale" in logo ? logo.scale : 1 } as CSSProperties}
-                />
-              </a>
-            ))}
-          </div>
-        </section>
+        </div>
 
         <section className={styles.section}>
           <h2>FAQ</h2>
