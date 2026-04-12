@@ -155,9 +155,10 @@ const communityLogos = [
   {
     name: "Commons Hub",
     href: "https://www.commons-hub.at/",
-    src: "/logos-community/commons-hub.png",
-    width: 1181,
-    height: 1037,
+    src: "https://www.commons-hub.at/favicon.ico",
+    width: 2084,
+    height: 2084,
+    unoptimized: true,
   },
   {
     name: "ETHPadThai",
@@ -165,6 +166,14 @@ const communityLogos = [
     src: "/logos-community/ethpadthai.png",
     width: 1023,
     height: 1024,
+  },
+  {
+    name: "Web3Privacy",
+    href: "https://web3privacy.info/",
+    src: "/logos-community/web3privacy.svg",
+    width: 236,
+    height: 64,
+    invert: true,
   },
 ] as const;
 
