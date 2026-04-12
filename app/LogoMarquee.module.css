@@ -111,6 +111,34 @@
   object-fit: contain;
 }
 
+.logoMarqueeImageInvert {
+  filter: invert(1);
+}
+
+.logoMarqueeSectionSubtle {
+  margin: 0 0 2.25rem;
+}
+
+.logoMarqueeSectionSubtle .logoMarqueeItem {
+  min-height: calc(1.55rem * 1.65);
+  opacity: 0.62;
+}
+
+.logoMarqueeSectionSubtle .logoMarqueeItem:hover {
+  opacity: 0.82;
+}
+
+/* Normalize subtle row: ignore per-logo --logo-scale; cap both dimensions so aspect ratio holds. */
+.logoMarqueeSectionSubtle .logoMarqueeImage {
+  --logo-scale: 1 !important;
+  box-sizing: border-box;
+  height: auto;
+  width: auto;
+  max-height: 1.55rem;
+  max-width: min(9.25rem, 28vw);
+  object-fit: contain;
+}
+
 @keyframes marqueeEnterFromRight {
   from {
     transform: translate3d(clamp(1.5rem, 8vw, 10rem), 0, 0);
@@ -150,6 +178,15 @@
 
   .logoMarqueeItem {
     min-height: calc(2.1rem * 1.75);
+  }
+
+  .logoMarqueeSectionSubtle .logoMarqueeImage {
+    max-height: 1.32rem;
+    max-width: min(7.75rem, 36vw);
+  }
+
+  .logoMarqueeSectionSubtle .logoMarqueeItem {
+    min-height: calc(1.32rem * 1.65);
   }
 }
 
