@@ -21,7 +21,9 @@ export type LogoMarqueeProps = {
   durationMobileSec?: number;
   /** Optional tablet width override (`--marquee-user-duration-tablet`). */
   durationTabletSec?: number;
-  /** One-time slide-in from the right before the infinite loop (easy to turn off if brittle). */
+  /** When true, shows a single non-scrolling row (no duplicate belt or CSS loop). */
+  static?: boolean;
+  /** One-time slide-in from the right before the infinite loop (ignored when `static`). */
   entrance?: boolean;
   /** Must match CSS `--marquee-loop-delay` / entrance animation duration for clean handoff. */
   entranceDurationMs?: number;
@@ -62,6 +64,7 @@ export default function LogoMarquee({
   durationSec,
   durationMobileSec,
   durationTabletSec,
+  static: isStatic = false,
   entrance = false,
   entranceDurationMs = 720,
   "aria-label": ariaLabel = "Partner logos",
@@ -71,7 +74,7 @@ export default function LogoMarquee({
     ...(durationSec != null ? { ["--marquee-user-duration" as string]: `${durationSec}s` } : {}),
     ...(durationMobileSec != null ? { ["--marquee-user-duration-mobile" as string]: `${durationMobileSec}s` } : {}),
     ...(durationTabletSec != null ? { ["--marquee-user-duration-tablet" as string]: `${durationTabletSec}s` } : {}),
-    ...(entrance
+    ...(entrance && !isStatic
       ? {
           ["--marquee-entrance-duration" as string]: `${entranceDurationMs}ms`,
           ["--marquee-loop-delay" as string]: `${entranceDurationMs}ms`,
@@ -79,7 +82,11 @@ export default function LogoMarquee({
       : {}),
   } as CSSProperties;
 
-  const belt = (
+  const belt = isStatic ? (
+    <div className={`${styles.marqueeBelt} ${styles.marqueeBeltStatic}`}>
+      {renderLogoRow(logos, "a", styles.logoMarqueeItem, styles.logoMarqueeImage)}
+    </div>
+  ) : (
     <div
       className={styles.marqueeBelt}
       data-direction={direction}
@@ -90,6 +97,8 @@ export default function LogoMarquee({
     </div>
   );
 
+  const showEntrance = entrance && !isStatic;
+
   return (
     <section
       className={[styles.logoMarqueeSection, className].filter(Boolean).join(" ")}
@@ -97,7 +106,7 @@ export default function LogoMarquee({
       style={sectionStyle}
     >
       <div className={styles.marqueeMask}>
-        {entrance ? (
+        {showEntrance ? (
           <div className={styles.marqueeEntrance} data-entrance="on">
             {belt}
           </div>
