@@ -60,6 +60,18 @@
   z-index: 1;
 }
 
+/* Static partner row: full-width centered strip, no transform animation */
+.marqueeBeltStatic {
+  animation: none;
+  animation-delay: 0s;
+  width: 100%;
+  max-width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 0.75rem;
+  will-change: auto;
+}
+
 /* Loop starts after optional entrance so the first frame of the infinite cycle is not fighting the entrance transform */
 .marqueeBelt[data-loop-delay="on"] {
   animation-delay: var(--marquee-loop-delay, 0ms);
@@ -156,5 +168,9 @@
   .marqueeBelt[data-direction="right"] {
     animation: none;
     transform: translate3d(0, 0, 0);
+  }
+
+  .marqueeBeltStatic {
+    transform: none;
   }
 }
