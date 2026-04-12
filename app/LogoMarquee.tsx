@@ -9,6 +9,8 @@ export type LogoMarqueeLogo = {
   width: number;
   height: number;
   scale?: number;
+  /** When true, inverts raster colors (e.g. white mark → dark on a light page). */
+  invert?: boolean;
 };
 
 export type LogoMarqueeProps = {
@@ -27,6 +29,8 @@ export type LogoMarqueeProps = {
   entrance?: boolean;
   /** Must match CSS `--marquee-loop-delay` / entrance animation duration for clean handoff. */
   entranceDurationMs?: number;
+  /** Secondary row: smaller logos, lower opacity, tighter vertical rhythm. */
+  visualWeight?: "default" | "subtle";
   "aria-label"?: string;
   className?: string;
 };
@@ -51,7 +55,7 @@ function renderLogoRow(
         alt={logo.name}
         width={logo.width}
         height={logo.height}
-        className={imageClass}
+        className={[imageClass, logo.invert ? styles.logoMarqueeImageInvert : ""].filter(Boolean).join(" ")}
         style={{ "--logo-scale": logo.scale != null ? logo.scale : 1 } as CSSProperties}
       />
     </a>
@@ -67,6 +71,7 @@ export default function LogoMarquee({
   static: isStatic = false,
   entrance = false,
   entranceDurationMs = 720,
+  visualWeight = "default",
   "aria-label": ariaLabel = "Partner logos",
   className,
 }: LogoMarqueeProps) {
@@ -101,7 +106,15 @@ export default function LogoMarquee({
 
   return (
     <section
-      className={[styles.logoMarqueeSection, className].filter(Boolean).join(" ")}
+      className={
+        [
+          styles.logoMarqueeSection,
+          visualWeight === "subtle" ? styles.logoMarqueeSectionSubtle : "",
+          className,
+        ]
+          .filter(Boolean)
+          .join(" ")
+      }
       aria-label={ariaLabel}
       style={sectionStyle}
     >
