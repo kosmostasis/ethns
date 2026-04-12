@@ -61,9 +61,9 @@ const communityLogos = [
   {
     name: "Kernel",
     href: "https://kernel.community/",
-    src: "/logos-community/kernel.ico",
-    width: 32,
-    height: 32,
+    src: "https://www.kernel.community/logos/KernelLogo.svg",
+    width: 392,
+    height: 126,
   },
   {
     name: "SUCI",
