@@ -96,6 +96,12 @@
 
 .logoMarqueeSectionSubtle {
   margin: 0 0 2.25rem;
+  /* Tighter than default row: wide wordmarks read better with a slightly smaller rem gap. */
+  --marquee-gap: 0.58rem;
+}
+
+.logoMarqueeSectionSubtle .marqueeBeltStatic {
+  row-gap: 0.55rem;
 }
 
 .logoMarqueeSectionSubtle .logoMarqueeItem {
@@ -166,6 +172,14 @@
 
   .logoMarqueeSectionSubtle .logoMarqueeItem {
     min-height: calc(1.32rem * 1.65);
+  }
+
+  .logoMarqueeSectionSubtle {
+    --marquee-gap: 0.5rem;
+  }
+
+  .logoMarqueeSectionSubtle .marqueeBeltStatic {
+    row-gap: 0.45rem;
   }
 }
 
