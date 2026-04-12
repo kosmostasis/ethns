@@ -57,6 +57,72 @@ const partnerLogos = [
   },
 ] as const;
 
+const communityLogos = [
+  {
+    name: "Kernel",
+    href: "https://kernel.community/",
+    src: "/logos-community/kernel.ico",
+    width: 32,
+    height: 32,
+  },
+  {
+    name: "Fracton Ventures",
+    href: "https://fracton.ventures/",
+    src: "/logos-community/fracton.png",
+    width: 2285,
+    height: 764,
+  },
+  {
+    name: "SUCI",
+    href: "https://www.suci.io/",
+    src: "/logos-community/suci-mark.png",
+    width: 512,
+    height: 512,
+  },
+  {
+    name: "Privote",
+    href: "https://privote.live/",
+    src: "/logos-community/privote.svg",
+    width: 662,
+    height: 662,
+  },
+  {
+    name: "RegistryChain",
+    href: "https://registrychain.com/",
+    src: "/logos-community/registrychain.png",
+    width: 5216,
+    height: 1768,
+  },
+  {
+    name: "ETHKL",
+    href: "https://www.ethkl.org/",
+    src: "/logos-community/ethkl.png",
+    width: 93,
+    height: 36,
+  },
+  {
+    name: "Metropolis",
+    href: "https://metropolisglobal.com/",
+    src: "/logos-community/metropolis.png",
+    width: 768,
+    height: 173,
+  },
+  {
+    name: "CrossBar",
+    href: "https://www.crossbar-inc.com/",
+    src: "/logos-community/crossbar.svg",
+    width: 1182,
+    height: 549,
+  },
+  {
+    name: "muShanghai",
+    href: "https://mushanghai.xyz/",
+    src: "/logos-community/mushanghai.png",
+    width: 256,
+    height: 80,
+  },
+] as const;
+
 const heroVideoSrc = process.env.NEXT_PUBLIC_HERO_VIDEO_URL ?? defaultHeroVideo;
 
 export default function Home() {
@@ -144,7 +210,15 @@ export default function Home() {
           <ParticipationOutcomesTabs />
         </section>
 
-        <LogoMarquee logos={partnerLogos} static />
+        <div className={styles.partnerLogoStack}>
+          <LogoMarquee logos={partnerLogos} static />
+          <LogoMarquee
+            logos={communityLogos}
+            static
+            visualWeight="subtle"
+            aria-label="Community and ecosystem logos"
+          />
+        </div>
 
         <section className={styles.section}>
           <h2>FAQ</h2>
