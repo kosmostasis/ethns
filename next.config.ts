@@ -19,6 +19,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "www.kernel.community",
       },
+      {
+        protocol: "https",
+        hostname: "www.commons-hub.at",
+      },
     ],
   },
 };
