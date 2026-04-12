@@ -14,27 +14,6 @@
   overflow-y: visible;
 }
 
-.logoMarqueeSection::before,
-.logoMarqueeSection::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: clamp(5rem, 16vw, 10rem);
-  pointer-events: none;
-  z-index: 2;
-}
-
-.logoMarqueeSection::before {
-  left: 0;
-  background: linear-gradient(to right, var(--bg) 0%, rgba(245, 245, 248, 0) 100%);
-}
-
-.logoMarqueeSection::after {
-  right: 0;
-  background: linear-gradient(to left, var(--bg) 0%, rgba(245, 245, 248, 0) 100%);
-}
-
 .marqueeMask {
   position: relative;
   width: 100%;
