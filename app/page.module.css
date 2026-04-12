@@ -19,7 +19,8 @@
 .header,
 .hero,
 .section,
-.footer {
+.footer,
+.partnerLogoStack {
   width: min(1080px, calc(100% - 2.5rem));
   margin-inline: auto;
 }
@@ -197,10 +198,6 @@
   object-position: bottom center;
 }
 
-
-.partnerLogoStack {
-  width: 100%;
-}
 
 .partnerLogoStack > :global(section:first-of-type) {
   margin-bottom: 0.65rem;
@@ -715,7 +712,8 @@
   .header,
   .hero,
   .section,
-  .footer {
+  .footer,
+  .partnerLogoStack {
     width: min(1080px, calc(100% - 1.25rem));
   }
 
