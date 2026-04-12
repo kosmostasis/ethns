@@ -34,18 +34,18 @@ const partnerLogos = [
     height: 32,
   },
   {
-    name: "Base",
-    href: "https://base.org",
-    src: "/logo-base.svg",
-    width: 88,
-    height: 88,
-  },
-  {
     name: "Invisible Garden",
     href: "https://invisible.garden",
     src: "/logo-invisible-garden.png",
     width: 578,
     height: 209,
+  },
+  {
+    name: "Base",
+    href: "https://base.org",
+    src: "/logo-base.svg",
+    width: 88,
+    height: 88,
   },
   {
     name: "Seapunk",
@@ -144,7 +144,7 @@ export default function Home() {
           <ParticipationOutcomesTabs />
         </section>
 
-        <LogoMarquee logos={partnerLogos} direction="left" entrance />
+        <LogoMarquee logos={partnerLogos} static />
 
         <section className={styles.section}>
           <h2>FAQ</h2>
