@@ -5,7 +5,7 @@ export default function HeroArtImage() {
   return (
     <div className={styles.heroImageFrame}>
       <Image
-        src="https://ethereum.org/_next/static/media/enterprise-eth.d2a3f314.png"
+        src="/logos-remote/enterprise-eth.png"
         alt="Ethereum enterprise illustration"
         fill
         sizes="(max-width: 900px) 100vw, 36vw"

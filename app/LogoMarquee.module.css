@@ -74,7 +74,6 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: calc(2.6rem * 1.75);
   opacity: 0.94;
   transition: opacity 0.2s ease;
 }
@@ -86,12 +85,21 @@
 .logoMarqueeImage {
   display: block;
   width: auto;
-  height: calc(2.6rem * var(--logo-scale, 1));
+  height: calc(3.2rem * var(--logo-scale, 1));
   object-fit: contain;
 }
 
 .logoMarqueeImageInvert {
   filter: invert(1);
+}
+
+.logoMarqueeLabel {
+  font-family: var(--font-inter), Inter, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  white-space: nowrap;
+  margin-left: 0.3rem;
 }
 
 .logoMarqueeSectionSubtle {
@@ -105,7 +113,7 @@
 }
 
 .logoMarqueeSectionSubtle .logoMarqueeItem {
-  min-height: calc(1.55rem * 1.65);
+  min-width: 7.5rem;
   opacity: 0.62;
 }
 
@@ -161,17 +169,13 @@
     height: 2.1rem;
   }
 
-  .logoMarqueeItem {
-    min-height: calc(2.1rem * 1.75);
-  }
-
   .logoMarqueeSectionSubtle .logoMarqueeImage {
     max-height: 1.32rem;
-    max-width: min(7.75rem, 36vw);
+    max-width: min(7.75rem, 28vw);
   }
 
   .logoMarqueeSectionSubtle .logoMarqueeItem {
-    min-height: calc(1.32rem * 1.65);
+    min-width: 5.5rem;
   }
 
   .logoMarqueeSectionSubtle {

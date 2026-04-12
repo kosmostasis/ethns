@@ -51,9 +51,9 @@ const partnerLogos = [
     name: "Seapunk",
     href: "https://seapunk.asia",
     src: "/logo-seapunk.png",
-    width: 500,
-    height: 500,
-    scale: 1.75,
+    width: 440,
+    height: 260,
+    scale: 1.1,
   },
 ] as const;
 
@@ -61,7 +61,7 @@ const communityLogos = [
   {
     name: "Kernel",
     href: "https://kernel.community/",
-    src: "https://www.kernel.community/logos/KernelLogo.svg",
+    src: "/logos-remote/kernel-logo.svg",
     width: 392,
     height: 126,
   },
@@ -79,6 +79,7 @@ const communityLogos = [
     src: "/logos-community/privote.svg",
     width: 662,
     height: 662,
+    showLabel: true,
   },
   {
     name: "Fracton Ventures",
@@ -135,6 +136,7 @@ const communityLogos = [
     src: "/logos-community/fil-builders.ico",
     width: 253,
     height: 256,
+    showLabel: true,
   },
   {
     name: "Swarm",
@@ -155,10 +157,10 @@ const communityLogos = [
   {
     name: "Commons Hub",
     href: "https://www.commons-hub.at/",
-    src: "https://www.commons-hub.at/favicon.ico",
+    src: "/logos-remote/commons-hub.ico",
     width: 2084,
     height: 2084,
-    unoptimized: true,
+    showLabel: true,
   },
   {
     name: "ETHPadThai",
@@ -166,6 +168,7 @@ const communityLogos = [
     src: "/logos-community/ethpadthai.png",
     width: 1023,
     height: 1024,
+    showLabel: true,
   },
   {
     name: "Web3Privacy",
@@ -187,7 +190,7 @@ export default function Home() {
           <span className={styles.brandTitle}>
             <a href={links.ethereumHome} target="_blank" rel="noopener noreferrer" aria-label="Ethereum">
               <Image
-                src="https://ethereum.org/images/assets/svgs/eth-diamond-purple.svg"
+                src="/logos-remote/eth-diamond-purple.svg"
                 alt=""
                 width={20}
                 height={20}
@@ -196,7 +199,7 @@ export default function Home() {
             </a>
             <a href={links.nsHome} target="_blank" rel="noopener noreferrer" aria-label="Network School">
               <Image
-                src="https://assets.ns.com/static/about/network-state-and-network-school-logos/network-state-plus-flag-logos/network-state-plus-flag-logo-black.svg"
+                src="/logos-remote/ns-flag-logo-black.svg"
                 alt=""
                 width={20}
                 height={20}
@@ -295,7 +298,7 @@ export default function Home() {
           Built with ❤️ at{" "}
           <a href={links.nsHome} target="_blank" rel="noopener noreferrer" aria-label="Network School">
             <Image
-              src="https://assets.ns.com/static/about/network-state-and-network-school-logos/network-state-plus-flag-logos/network-state-plus-flag-logo-black.svg"
+              src="/logos-remote/ns-flag-logo-black.svg"
               alt=""
               width={18}
               height={18}

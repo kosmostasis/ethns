@@ -13,6 +13,8 @@ export type LogoMarqueeLogo = {
   invert?: boolean;
   /** When true, serves the file as-is (helps RGBA PNG alpha through the image optimizer). */
   unoptimized?: boolean;
+  /** When true, shows the name as a text label next to the logo (for icon-only logos). */
+  showLabel?: boolean;
 };
 
 export type LogoMarqueeProps = {
@@ -61,6 +63,7 @@ function renderLogoRow(
         className={[imageClass, logo.invert ? styles.logoMarqueeImageInvert : ""].filter(Boolean).join(" ")}
         style={{ "--logo-scale": logo.scale != null ? logo.scale : 1 } as CSSProperties}
       />
+      {logo.showLabel && <span className={styles.logoMarqueeLabel}>{logo.name}</span>}
     </a>
   ));
 }
