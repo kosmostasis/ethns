@@ -11,6 +11,8 @@ export type LogoMarqueeLogo = {
   scale?: number;
   /** When true, inverts raster colors (e.g. white mark → dark on a light page). */
   invert?: boolean;
+  /** When true, serves the file as-is (helps RGBA PNG alpha through the image optimizer). */
+  unoptimized?: boolean;
 };
 
 export type LogoMarqueeProps = {
@@ -55,6 +57,7 @@ function renderLogoRow(
         alt={logo.name}
         width={logo.width}
         height={logo.height}
+        unoptimized={logo.unoptimized === true}
         className={[imageClass, logo.invert ? styles.logoMarqueeImageInvert : ""].filter(Boolean).join(" ")}
         style={{ "--logo-scale": logo.scale != null ? logo.scale : 1 } as CSSProperties}
       />
