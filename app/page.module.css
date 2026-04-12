@@ -198,6 +198,14 @@
 }
 
 
+.partnerLogoStack {
+  width: 100%;
+}
+
+.partnerLogoStack > :global(section:first-of-type) {
+  margin-bottom: 0.65rem;
+}
+
 .heroVideoStrip {
   width: 100%;
   margin-top: 2rem;
