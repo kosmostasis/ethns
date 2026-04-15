@@ -87,6 +87,9 @@ export default function OneDayPage() {
             <Link className={styles.dateButton} href="/opendays/may-23">
               May 23rd
             </Link>
+            <Link className={styles.dateButton} href="/opendays/closing-party">
+              Closing Party
+            </Link>
           </div>
           <h1>
             EVM & Protocols Open Day
@@ -99,7 +102,7 @@ export default function OneDayPage() {
           </p>
           <div className={styles.ctas}>
             <a className={styles.primaryCta} href={links.quickSync} target="_blank" rel="noopener noreferrer">
-              Speakers & Sponsors Quick Sync
+              Partners Quick Sync
             </a>
             <a
               className={styles.secondaryCta}
