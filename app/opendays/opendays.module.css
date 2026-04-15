@@ -331,6 +331,72 @@
   color: var(--accent-dark);
 }
 
+.sponsorFaq {
+  margin-top: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.sponsorFaqQuestion {
+  list-style: none;
+  display: block;
+  margin: 0;
+  padding: 0.85rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.sponsorFaqQuestion::-webkit-details-marker {
+  display: none;
+}
+
+.sponsorFaqQuestion::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 0.55rem;
+  color: var(--muted);
+  transform: rotate(0deg);
+  transition: transform 0.18s ease;
+}
+
+.sponsorFaq[open] .sponsorFaqQuestion::before {
+  transform: rotate(90deg);
+}
+
+.sponsorTableWrap {
+  padding: 0 1rem 1rem;
+  overflow-x: auto;
+}
+
+.sponsorTable {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 740px;
+  background: #fff;
+}
+
+.sponsorTable th,
+.sponsorTable td {
+  border-bottom: 1px solid var(--border);
+  padding: 0.7rem 0.65rem;
+  text-align: left;
+  vertical-align: top;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.sponsorTable thead th {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.sponsorTable tbody th {
+  color: var(--text);
+  font-weight: 600;
+  width: 34%;
+}
+
 .costHighlight {
   margin: 0.5rem 0 1rem;
   padding: 1rem 1.15rem;
