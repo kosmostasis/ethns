@@ -1,0 +1,178 @@
+import Image from "next/image";
+import type { Metadata } from "next";
+import Link from "next/link";
+import OpenDaysGallery from "../OpenDaysGallery";
+import styles from "../opendays.module.css";
+
+const links = {
+  quickSync: "https://app.reclaim.ai/m/kosmostasis/flexible-meeting",
+  ethereumHome: "https://ethereum.org",
+  nsHome: "https://ns.com",
+  nsAbout: "https://ns.com/about",
+  nsEthns: "https://ns.com/ethns",
+  ethereumAssets: "https://ethereum.org/assets/",
+  lumaCalendar: "https://luma.com/ethns",
+  lumaMay16Event: "https://luma.com/67p1p7sv",
+  lumaMay23Event: "https://luma.com/67p1p7sv",
+  nsBannerTweet: "https://x.com/ns/status/2030311587870097572",
+} as const;
+
+export const metadata: Metadata = {
+  title: "Ethereum NS | May 23rd Open Day",
+  description:
+    "An open day event for Genesis Month at Network School with guest speakers from leading open hardware and DePIN projects.",
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: { index: false, follow: false },
+  },
+};
+
+export default function May23OpenDayPage() {
+  return (
+    <div className={styles.page}>
+      <header className={styles.header}>
+        <div className={styles.brand}>
+          <span className={styles.brandTitle}>
+            <a href={links.ethereumHome} target="_blank" rel="noopener noreferrer" aria-label="Ethereum">
+              <Image
+                src="/logos-remote/eth-diamond-purple.svg"
+                alt=""
+                width={20}
+                height={20}
+                className={styles.brandLogo}
+              />
+            </a>
+            <a href={links.nsHome} target="_blank" rel="noopener noreferrer" aria-label="Network School">
+              <Image
+                src="/logos-remote/ns-flag-logo-black.svg"
+                alt=""
+                width={20}
+                height={20}
+                className={styles.brandLogo}
+              />
+            </a>
+            <a href={links.nsEthns} target="_blank" rel="noopener noreferrer" aria-label="Ethereum NS">
+              <Image
+                src="/ethns-header-mark.png"
+                alt=""
+                width={64}
+                height={64}
+                className={styles.brandTitleImage}
+              />
+            </a>
+          </span>
+        </div>
+        <nav className={styles.nav} aria-label="Page">
+          <Link href="/" className={styles.navHome} aria-label="Home">
+            <svg viewBox="0 0 24 24" aria-hidden="true" className={styles.navIcon}>
+              <path
+                d="M3.75 10.71 12 4.5l8.25 6.21v8.79a.75.75 0 0 1-.75.75h-5.25v-6h-4.5v6H4.5a.75.75 0 0 1-.75-.75v-8.79Z"
+                fill="currentColor"
+              />
+            </svg>
+          </Link>
+          <a href={links.lumaCalendar} target="_blank" rel="noopener noreferrer" aria-label="Luma calendar">
+            <Image src="/calendar-icon.svg" alt="" width={20} height={20} className={styles.navIcon} />
+          </a>
+        </nav>
+      </header>
+
+      <main className={styles.main}>
+        <section className={styles.hero}>
+          <div className={styles.dateButtons} aria-label="Event dates">
+            <Link className={styles.dateButton} href="/opendays">
+              May 16th
+            </Link>
+            <Link className={styles.dateButton} href="/opendays/may-23" aria-current="page">
+              May 23rd
+            </Link>
+          </div>
+          <h1>
+            Open Hardware & DePIN Open Day
+            <br />
+            <span className={styles.heroSubhead}>at ETH NS Genesis Month</span>
+          </h1>
+          <p className={styles.lead}>
+            A weekend summit on May 23rd, and the perfect moment to get a taste of life at NS.
+            Come represent your open hardware or DePIN project, joining our +400 members on campus, and builders from
+            Singapore and Kuala Lumpur.
+          </p>
+          <div className={styles.ctas}>
+            <a className={styles.primaryCta} href={links.quickSync} target="_blank" rel="noopener noreferrer">
+              Sponsors & Speakers Quick Sync
+            </a>
+            <button className={styles.secondaryCta} type="button" disabled aria-disabled="true">
+              Register (TBA)
+            </button>
+            <a className={styles.secondaryCta} href="#event-details">
+              Learn More
+            </a>
+          </div>
+          <OpenDaysGallery />
+        </section>
+
+        <section id="event-details" className={styles.section} aria-labelledby="costs-heading">
+          <h2 id="costs-heading">Ballpark production cost</h2>
+          <p>
+            Recent one-day NS-hosted events in this class—think the NS × Anthropic Claude Code meetup—have landed around{" "}
+            <strong>roughly a third of typical market pricing</strong> for comparable venue-led production.
+          </p>
+          <div className={styles.costHighlight}>
+            <p className={styles.costRange}>USD $3,000–5,000</p>
+            <p className={styles.costNote}>
+              Directional range only; final quotes depend on scope. Expect the total to move with food coverage,
+              ground transport (e.g. buses from Singapore and/or Kuala Lumpur for on the order of ~200 people), audio
+              / visual, and printed signage—such as an exterior vinyl banner (see the NS{" "}
+              <a href={links.nsBannerTweet} target="_blank" rel="noopener noreferrer">
+                reference post on X
+              </a>
+              ).
+            </p>
+          </div>
+          <p>
+            The placeholder listing{" "}
+            <a href={links.lumaMay23Event} target="_blank" rel="noopener noreferrer">
+              “EVM Day @ Network School” on Luma
+            </a>{" "}
+            illustrates the shape of a one-day EVM open house: NS Café venue, optional return-trip buses from KL and
+            Singapore subject to availability, and an agenda announced as the date firms up—aligned with how Ethereum NS
+            is positioning Ethereum Month on the ground.
+          </p>
+          <h2>What usually moves the line item</h2>
+          <ul>
+            <li>Catering depth (coffee-only vs full meals, headcount assumptions)</li>
+            <li>Chartered or organized buses from Singapore and/or Kuala Lumpur at ~200-person scale</li>
+            <li>A/V for stage and room(s), including backup and staffing</li>
+            <li>Print and environmental graphics (banners, wayfinding, exterior vinyl)</li>
+          </ul>
+        </section>
+      </main>
+
+      <footer className={styles.footer}>
+        <p>
+          Built with ❤️ at{" "}
+          <a href={links.nsHome} target="_blank" rel="noopener noreferrer" aria-label="Network School">
+            <Image
+              src="/logos-remote/ns-flag-logo-black.svg"
+              alt=""
+              width={18}
+              height={18}
+              className={styles.footerFlag}
+            />
+          </a>
+        </p>
+        <p>
+          Sources + Attribution:{" "}
+          <a href={links.nsAbout} target="_blank" rel="noopener noreferrer">
+            Network School
+          </a>
+          {" & "}
+          <a href={links.ethereumAssets} target="_blank" rel="noopener noreferrer">
+            Ethereum.org
+          </a>
+        </p>
+      </footer>
+    </div>
+  );
+}
