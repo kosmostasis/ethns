@@ -5,10 +5,10 @@ import Image from "next/image";
 import styles from "./opendays.module.css";
 
 const galleryImages = [
-  "/opendays-gallery/01.png",
+  "/opendays-gallery/04.png",
   "/opendays-gallery/02.png",
   "/opendays-gallery/03.png",
-  "/opendays-gallery/04.png",
+  "/opendays-gallery/01.png",
   "/opendays-gallery/05.png",
   "/opendays-gallery/06.png",
 ] as const;
