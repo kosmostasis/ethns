@@ -127,7 +127,7 @@ export default function May23OpenDayPage() {
         </section>
 
         <section id="event-details" className={styles.section} aria-labelledby="costs-heading">
-          <h2 id="costs-heading">Ballpark production cost</h2>
+          <h2 id="costs-heading">Sponsor our Open Day on May 23rd</h2>
           <p>
             Recent one-day NS-hosted events in this class—think the NS × Anthropic Claude Code meetup—have landed around{" "}
             <strong>roughly a third of typical market pricing</strong> for comparable venue-led production.
