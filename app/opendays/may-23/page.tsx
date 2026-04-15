@@ -87,6 +87,9 @@ export default function May23OpenDayPage() {
             <Link className={styles.dateButton} href="/opendays/may-23" aria-current="page">
               May 23rd
             </Link>
+            <Link className={styles.dateButton} href="/opendays/closing-party">
+              Closing Party
+            </Link>
           </div>
           <h1>
             Open Hardware & DePIN Open Day
@@ -100,7 +103,7 @@ export default function May23OpenDayPage() {
           </p>
           <div className={styles.ctas}>
             <a className={styles.primaryCta} href={links.quickSync} target="_blank" rel="noopener noreferrer">
-              Sponsors & Speakers Quick Sync
+              Partners Quick Sync
             </a>
             <button className={styles.secondaryCta} type="button" disabled aria-disabled="true">
               Register (TBA)
