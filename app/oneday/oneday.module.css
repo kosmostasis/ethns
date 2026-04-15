@@ -1,0 +1,284 @@
+.page {
+  --bg: #f5f5f8;
+  --surface: #ffffff;
+  --text: #1f1d29;
+  --muted: #5b566e;
+  --border: #d7d2e6;
+  --accent: #6f4ceb;
+  --accent-dark: #5136b3;
+
+  min-height: 100vh;
+  padding-bottom: 2rem;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 12% 8%, rgba(111, 76, 235, 0.1), transparent 32%),
+    radial-gradient(circle at 88% 0%, rgba(111, 76, 235, 0.06), transparent 36%),
+    var(--bg);
+}
+
+.header,
+.main,
+.footer {
+  width: min(1080px, calc(100% - 2.5rem));
+  margin-inline: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.6rem 0;
+  flex-wrap: nowrap;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.brandTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.brandTitle a {
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+}
+
+.brandLogo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.brandTitleImage {
+  width: 24px;
+  height: 24px;
+  display: block;
+  object-fit: contain;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  margin-left: auto;
+  align-items: center;
+}
+
+.nav a {
+  color: var(--muted);
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.navIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.navHome {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.navHome:hover {
+  color: var(--accent-dark);
+}
+
+.hero {
+  padding: 2rem 0 1.25rem;
+}
+
+.eyebrow {
+  color: var(--accent-dark);
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+.hero h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.85rem, 3.6vw, 2.65rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  margin: 0 0 0.75rem;
+}
+
+.heroSubhead {
+  font-weight: 500;
+}
+
+.lead {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 62ch;
+  line-height: 1.55;
+}
+
+.ctas {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  margin-top: 1.35rem;
+}
+
+.primaryCta,
+.secondaryCta {
+  padding: 0.75rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 600;
+}
+
+.primaryCta {
+  background: var(--accent);
+  color: #fff;
+}
+
+.primaryCta:hover {
+  background: var(--accent-dark);
+}
+
+.secondaryCta {
+  border-color: var(--border);
+  background: #fff;
+}
+
+.secondaryCta:hover {
+  border-color: var(--accent);
+  color: var(--accent-dark);
+}
+
+.section {
+  margin-top: 1.75rem;
+  padding: 1.6rem;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.section h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  margin-bottom: 0.85rem;
+}
+
+.section p,
+.section li {
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.section p + p {
+  margin-top: 0.75rem;
+}
+
+.section ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.15rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.section a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.section a:hover {
+  color: var(--accent-dark);
+}
+
+.costHighlight {
+  margin: 0.5rem 0 1rem;
+  padding: 1rem 1.15rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #fcfbff;
+}
+
+.costRange {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.35rem;
+}
+
+.costNote {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.refBlock {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.refBlock p {
+  margin: 0 0 0.5rem;
+}
+
+.refList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.refList a {
+  font-weight: 600;
+}
+
+.privateNote {
+  margin-top: 1.25rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.footer {
+  margin: 2rem auto 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  display: grid;
+  gap: 0.5rem;
+  justify-items: center;
+  text-align: center;
+}
+
+.footer a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footerFlag {
+  vertical-align: -0.2em;
+}
+
+@media (max-width: 640px) {
+  .header,
+  .main,
+  .footer {
+    width: min(1080px, calc(100% - 1.25rem));
+  }
+}
