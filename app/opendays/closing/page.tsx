@@ -92,7 +92,7 @@ export default function ClosingPartyPage() {
             </Link>
           </div>
           <h1>
-            Closing Gathering
+            Closing Celebration
             <br />
             <span className={styles.heroSubhead}>of ETH NS Genesis Month</span>
           </h1>
@@ -127,18 +127,21 @@ export default function ClosingPartyPage() {
         <section id="event-details" className={styles.section} aria-labelledby="costs-heading">
           <h2 id="costs-heading">Community Celebration Sponsorship</h2>
           <p>
-            NS Community Celebration Rooftop Monthly Party is the flagship gathering of the Network School community - a
-            space to rest, reconnect, and build meaningful relationships. 100+ founders, engineers, operators, and
-            curious builders.
+            The NS celebration is the flagship monthly gathering of the Network School community, a space where
+            founders, engineers, operators, and curious builders come to rest, reconnect, and build meaningful relationships.
           </p>
           <p>
-            As hosts, we design the entire experience - from atmosphere and flow to signature cocktails. We invite a
-            limited number of sponsors to become part of that experience, not just visible in it. Your brand will not
-            simply sit on a banner. It will live in the narrative of the evening.
+            As hosts, the community co-designs the entire experience - from atmosphere and flow to signature cocktails.
+            The space is open for a limited number of sponsors to become part of that experience, not just visible in it.
+            Supporting brands will not simply sit on a banner, they will live in the narrative of the evening.
           </p>
           <p>
-            This is a community-driven, not-for-profit initiative. All sponsorship funds go directly toward bar, drinks,
-            and production costs. Any remaining materials roll forward into the next week&apos;s party.
+            This is a community-driven, not-for-profit initiative. All sponsorship funds go directly to the community and directed toward
+            bar, drinks, and production costs. Any remaining materials roll forward into the next celebration.
+          </p>
+          <p className={styles.ethNsCallout}>
+            ETH NS is directly supporting the existing community celebration by connecting sponsors coming to our event
+            with the organizers, and we are excited to see you there!
           </p>
 
           <details className={styles.sponsorFaq}>
