@@ -331,6 +331,19 @@
   color: var(--accent-dark);
 }
 
+.ethNsHighlight {
+  color: var(--accent-dark);
+}
+
+.section p.ethNsCallout {
+  color: var(--text);
+  margin-top: 0.95rem;
+  padding: 0.8rem 1rem;
+  border-left: 4px solid var(--border);
+  border-radius: 10px;
+  background: #fcfbff;
+}
+
 .sponsorFaq {
   margin-top: 1rem;
   border: 1px solid var(--border);
