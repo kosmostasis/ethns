@@ -109,6 +109,17 @@ export default function May23OpenDayPage() {
               Learn More
             </a>
           </div>
+          <div className={styles.heroArt}>
+            <div className={styles.heroImageFrame}>
+              <Image
+                src="/opendays-art/may-23.png"
+                alt="Ethereum developers blocks illustration"
+                fill
+                sizes="(max-width: 900px) 100vw, 36vw"
+                className={styles.heroImage}
+              />
+            </div>
+          </div>
           <OpenDaysGallery />
         </section>
 
