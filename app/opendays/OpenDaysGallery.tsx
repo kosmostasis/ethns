@@ -16,38 +16,65 @@ const galleryImages = [
 const AUTO_ADVANCE_MS = 5000;
 
 export default function OpenDaysGallery() {
-  const [index, setIndex] = useState(0);
+  // Start on the first real slide (index 1) because we render a clone at each end.
+  const [index, setIndex] = useState(1);
+  const [animate, setAnimate] = useState(true);
   const total = galleryImages.length;
+  const slides = [galleryImages[total - 1], ...galleryImages, galleryImages[0]];
 
   useEffect(() => {
     const timer = window.setInterval(() => {
-      setIndex((current) => (current + 1) % total);
+      setAnimate(true);
+      setIndex((current) => current + 1);
     }, AUTO_ADVANCE_MS);
 
     return () => window.clearInterval(timer);
   }, [total]);
 
   const showPrevious = () => {
-    setIndex((current) => (current - 1 + total) % total);
+    setAnimate(true);
+    setIndex((current) => current - 1);
   };
 
   const showNext = () => {
-    setIndex((current) => (current + 1) % total);
+    setAnimate(true);
+    setIndex((current) => current + 1);
+  };
+
+  const handleTransitionEnd = () => {
+    // Jump between cloned edge slides and their real counterparts with no animation.
+    if (index === 0) {
+      setAnimate(false);
+      setIndex(total);
+      return;
+    }
+
+    if (index === total + 1) {
+      setAnimate(false);
+      setIndex(1);
+    }
   };
 
   return (
     <div className={styles.galleryStrip} aria-label="Event photo gallery">
       <div className={styles.galleryAspect}>
-        <div className={styles.galleryTrack} style={{ transform: `translateX(-${index * 100}%)` }}>
-          {galleryImages.map((src, imageIndex) => (
-            <div key={src} className={styles.gallerySlide}>
+        <div
+          className={styles.galleryTrack}
+          style={{
+            transform: `translateX(-${index * 100}%)`,
+            transition: animate ? undefined : "none",
+          }}
+          onTransitionEnd={handleTransitionEnd}
+        >
+          {slides.map((src, imageIndex) => (
+            <div key={`${src}-${imageIndex}`} className={styles.gallerySlide}>
               <Image
                 src={src}
-                alt={`Event photo ${imageIndex + 1}`}
+                alt={`Event photo ${((imageIndex - 1 + total) % total) + 1}`}
                 fill
                 sizes="100vw"
                 className={styles.galleryImage}
-                priority={imageIndex === 0}
+                priority={imageIndex === 1}
               />
             </div>
           ))}
