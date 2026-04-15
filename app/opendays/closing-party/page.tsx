@@ -1,7 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
 import Link from "next/link";
-import OpenDaysGallery from "../OpenDaysGallery";
+import ClosingPartyVideo from "../ClosingPartyVideo";
 import styles from "../opendays.module.css";
 
 const links = {
@@ -115,7 +115,7 @@ export default function ClosingPartyPage() {
           <div className={styles.heroArt}>
             <div className={styles.heroImageFrame}>
               <Image
-                src="/opendays-art/closing-party.png"
+                src="/opendays-art/may-16.png"
                 alt="Ethereum logo held in hands illustration"
                 fill
                 sizes="(max-width: 900px) 100vw, 36vw"
@@ -123,12 +123,7 @@ export default function ClosingPartyPage() {
               />
             </div>
           </div>
-          <OpenDaysGallery />
-          <p className={styles.mediaNote}>
-            <a href={links.nsBannerTweet} target="_blank" rel="noopener noreferrer">
-              NS × Anthropic Claude Code Meetup
-            </a>
-          </p>
+          <ClosingPartyVideo />
         </section>
 
         <section id="event-details" className={styles.section} aria-labelledby="costs-heading">
