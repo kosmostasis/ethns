@@ -119,7 +119,7 @@ export default function OneDayPage() {
           <div className={styles.heroArt}>
             <div className={styles.heroImageFrame}>
               <Image
-                src="/opendays-art/may-16.png"
+                src="/opendays-art/closing-party.png"
                 alt="Ethereum illustration"
                 fill
                 sizes="(max-width: 900px) 100vw, 36vw"
@@ -128,11 +128,6 @@ export default function OneDayPage() {
             </div>
           </div>
           <OpenDaysGallery />
-          <p className={styles.mediaNote}>
-            <a href={links.nsBannerTweet} target="_blank" rel="noopener noreferrer">
-              NS × Anthropic Claude Code Meetup
-            </a>
-          </p>
         </section>
 
         <section id="event-details" className={styles.section} aria-labelledby="costs-heading">
