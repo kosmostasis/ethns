@@ -125,6 +125,11 @@ export default function OneDayPage() {
             </div>
           </div>
           <OpenDaysGallery />
+          <p className={styles.mediaNote}>
+            <a href={links.nsBannerTweet} target="_blank" rel="noopener noreferrer">
+              NS × Anthropic Claude Code Meetup
+            </a>
+          </p>
         </section>
 
         <section id="event-details" className={styles.section} aria-labelledby="costs-heading">
