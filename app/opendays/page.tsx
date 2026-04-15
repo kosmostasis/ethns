@@ -144,11 +144,16 @@ export default function OneDayPage() {
             <summary className={styles.sponsorFaqQuestion}>How can I be highlighted and what does sponsorship cover?</summary>
             <div className={styles.sponsorTableWrap}>
               <p>
-                You can sponsor the full event for $3-5k. Smaller sponsorships are also possible.
-                </p>
-                <p>
-                Sponsorship covers the costs of catering nutritious meals for attendees, A/V rentals, general logistics at NS, and
-                possibly chartered ground transportation from Singapore and/or Kuala Lumpur (hence the cost range).
+                You can join us as an sponsor. Sponsorship covers the costs of catering nutritious meals for attendees,
+                A/V rentals, general logistics at NS, and possibly chartered ground transportation from Singapore
+                and/or Kuala Lumpur.
+              </p>
+              <p>
+                Please{" "}
+                <a href={links.quickSync} target="_blank" rel="noopener noreferrer">
+                  book a quick sync
+                </a>{" "}
+                with us to discuss sponsorship options.
               </p>
             </div>
           </details>
