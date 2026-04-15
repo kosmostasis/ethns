@@ -98,7 +98,6 @@ export default function OneDayPage() {
           </h1>
           <p className={styles.lead}>
             A weekend summit on May 16th, and the perfect moment to get a taste of life at NS.
-            Come represent your EVM chain or protocol, joining our +400 members on campus, and builders from Singapore and Kuala Lumpur.
           </p>
           <div className={styles.ctas}>
             <a className={styles.primaryCta} href={links.quickSync} target="_blank" rel="noopener noreferrer">
@@ -133,37 +132,26 @@ export default function OneDayPage() {
         <section id="event-details" className={styles.section} aria-labelledby="costs-heading">
           <h2 id="costs-heading">Sponsor our Open Day on May 16th</h2>
           <p>
-            Recent one-day NS-hosted events in this class—think the NS × Anthropic Claude Code meetup—have landed around{" "}
-            <strong>roughly a third of typical market pricing</strong> for comparable venue-led production.
+            Our month of Ethereum-focused programming at Network School will open on May 16th to builders, founders,
+            investors, institutions, researchers, and other leaders from the wider EVM world.
           </p>
-          <div className={styles.costHighlight}>
-            <p className={styles.costRange}>USD $3,000–5,000</p>
-            <p className={styles.costNote}>
-              Directional range only; final quotes depend on scope. Expect the total to move with food coverage,
-              ground transport (e.g. buses from Singapore and/or Kuala Lumpur for on the order of ~200 people), audio
-              / visual, and printed signage—such as an exterior vinyl banner (see the NS{" "}
-              <a href={links.nsBannerTweet} target="_blank" rel="noopener noreferrer">
-                reference post on X
-              </a>
-              ).
-            </p>
-          </div>
           <p>
-            The placeholder listing{" "}
-            <a href={links.lumaMay16Event} target="_blank" rel="noopener noreferrer">
-              “EVM Day @ Network School” on Luma
-            </a>{" "}
-            illustrates the shape of a one-day EVM open house: NS Café venue, optional return-trip buses from KL and
-            Singapore subject to availability, and an agenda announced as the date firms up—aligned with how Ethereum NS
-            is positioning Ethereum Month on the ground.
+            Represent your EVM chain or protocol on stage, and join our +400 members on campus, alongside ~200 builders
+            from Singapore and Kuala Lumpur. You can join us as a speaker and also be highlighted as a title sponsor for the event.
           </p>
-          <h2>What usually moves the line item</h2>
-          <ul>
-            <li>Catering depth (coffee-only vs full meals, headcount assumptions)</li>
-            <li>Chartered or organized buses from Singapore and/or Kuala Lumpur at ~200-person scale</li>
-            <li>A/V for stage and room(s), including backup and staffing</li>
-            <li>Print and environmental graphics (banners, wayfinding, exterior vinyl)</li>
-          </ul>
+
+          <details className={styles.sponsorFaq}>
+            <summary className={styles.sponsorFaqQuestion}>How can I be highlighted and what does sponsorship cover?</summary>
+            <div className={styles.sponsorTableWrap}>
+              <p>
+                You can sponsor the full event for $3-5k. Smaller sponsorships are also possible.
+                </p>
+                <p>
+                Sponsorship covers the costs of catering nutritious meals for attendees, A/V rentals, general logistics at NS, and
+                possibly chartered ground transportation from Singapore and/or Kuala Lumpur (hence the cost range).
+              </p>
+            </div>
+          </details>
         </section>
       </main>
 
