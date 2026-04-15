@@ -125,7 +125,7 @@ export default function ClosingPartyPage() {
         </section>
 
         <section id="event-details" className={styles.section} aria-labelledby="costs-heading">
-          <h2 id="costs-heading">Community Celebration Sponsorship</h2>
+          <h2 id="costs-heading">Sponsor our Community Celebration</h2>
           <p>
             The NS celebration is the flagship monthly gathering of the Network School community, a space where
             founders, engineers, operators, and curious builders come to rest, reconnect, and build meaningful relationships.
