@@ -113,6 +113,17 @@ export default function OneDayPage() {
               Learn More
             </a>
           </div>
+          <div className={styles.heroArt}>
+            <div className={styles.heroImageFrame}>
+              <Image
+                src="/opendays-art/may-16.png"
+                alt="Ethereum illustration"
+                fill
+                sizes="(max-width: 900px) 100vw, 36vw"
+                className={styles.heroImage}
+              />
+            </div>
+          </div>
           <OpenDaysGallery />
         </section>
 
