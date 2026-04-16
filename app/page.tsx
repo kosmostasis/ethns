@@ -58,123 +58,11 @@ const communityLogos = [
     height: 180,
   },
   {
-    name: "Devfolio",
-    href: "https://devfolio.co/",
-    src: "/logos-community/devfolio.svg",
-    width: 640,
-    height: 180,
-  },
-  {
     name: "Arkiv",
     href: "https://arkiv.network/",
     src: "/logos-community/arkiv.svg",
     width: 1389,
     height: 320,
-  },
-  {
-    name: "ProtoVille",
-    href: "https://protoville.xyz/",
-    src: "/logos-community/protoville-mark.png",
-    width: 630,
-    height: 630,
-    circular: true,
-    showLabel: true,
-  },
-  {
-    name: "Seapunk",
-    href: "https://seapunk.asia",
-    src: "/logo-seapunk.png",
-    width: 440,
-    height: 260,
-    scale: 1.1,
-  },
-  {
-    name: "Kernel",
-    href: "https://kernel.community/",
-    src: "/logos-remote/kernel-logo.svg",
-    width: 392,
-    height: 126,
-  },
-  {
-    name: "SUCI",
-    href: "https://www.suci.io/",
-    src: "/logos-community/suci-logotype.png",
-    width: 1024,
-    height: 505,
-    unoptimized: true,
-  },
-  {
-    name: "Privote",
-    href: "https://privote.live/",
-    src: "/logos-community/privote.svg",
-    width: 662,
-    height: 662,
-    showLabel: true,
-  },
-  {
-    name: "Fracton Ventures",
-    href: "https://fracton.ventures/",
-    src: "/logos-community/fracton.png",
-    width: 2285,
-    height: 764,
-  },
-  {
-    name: "RegistryChain",
-    href: "https://registrychain.com/",
-    src: "/logos-community/registrychain.png",
-    width: 5216,
-    height: 1768,
-  },
-  {
-    name: "ETHKL",
-    href: "https://www.ethkl.org/",
-    src: "/logos-community/ethkl.png",
-    width: 93,
-    height: 36,
-  },
-  {
-    name: "Metropolis",
-    href: "https://metropolisglobal.com/",
-    src: "/logos-community/metropolis.png",
-    width: 768,
-    height: 173,
-  },
-  {
-    name: "CrossBar",
-    href: "https://www.crossbar-inc.com/",
-    src: "/logos-community/crossbar.svg",
-    width: 1182,
-    height: 549,
-  },
-  {
-    name: "muShanghai",
-    href: "https://mushanghai.xyz/",
-    src: "/logos-community/mushanghai.png",
-    width: 256,
-    height: 80,
-  },
-  {
-    name: "Hubs Network",
-    href: "https://www.hubsnetwork.org/",
-    src: "/logos-community/hubsnetwork.png",
-    width: 1127,
-    height: 349,
-  },
-  {
-    name: "FIL Builders",
-    href: "https://fil.builders/",
-    src: "/logos-community/fil-builders.ico",
-    width: 253,
-    height: 256,
-    showLabel: true,
-  },
-  {
-    name: "Swarm",
-    href: "https://www.ethswarm.org/",
-    src: "/logos-community/swarm-horizontal.png",
-    width: 1024,
-    height: 270,
-    unoptimized: true,
   },
   {
     name: "AyaHQ",
@@ -193,6 +81,28 @@ const communityLogos = [
     showLabel: true,
   },
   {
+    name: "CrossBar",
+    href: "https://www.crossbar-inc.com/",
+    src: "/logos-community/crossbar.svg",
+    width: 1182,
+    height: 549,
+    scale: 1.6,
+  },
+  {
+    name: "Devfolio",
+    href: "https://devfolio.co/",
+    src: "/logos-community/devfolio.svg",
+    width: 640,
+    height: 180,
+  },
+  {
+    name: "ETHKL",
+    href: "https://www.ethkl.org/",
+    src: "/logos-community/ethkl.png",
+    width: 93,
+    height: 36,
+  },
+  {
     name: "ETHPadThai",
     href: "https://ethpadthai.org/",
     src: "/logos-community/ethpadthai.png",
@@ -201,12 +111,132 @@ const communityLogos = [
     showLabel: true,
   },
   {
+    name: "FIL Builders",
+    href: "https://fil.builders/",
+    src: "/logos-community/fil-builders.ico",
+    width: 253,
+    height: 256,
+    showLabel: true,
+  },
+  {
+    name: "Fracton Ventures",
+    href: "https://fracton.ventures/",
+    src: "/logos-community/fracton.png",
+    width: 2285,
+    height: 764,
+  },
+  {
+    name: "Geode",
+    href: "https://geode.finance/",
+    src: "/logos-community/geode.png",
+    width: 2391,
+    height: 460,
+  },
+  {
+    name: "Hubs Network",
+    href: "https://www.hubsnetwork.org/",
+    src: "/logos-community/hubsnetwork.png",
+    width: 1127,
+    height: 349,
+  },
+  {
+    name: "Kernel",
+    href: "https://kernel.community/",
+    src: "/logos-remote/kernel-logo.svg",
+    width: 392,
+    height: 126,
+  },
+  {
+    name: "Metropolis",
+    href: "https://metropolisglobal.com/",
+    src: "/logos-community/metropolis.png",
+    width: 768,
+    height: 173,
+  },
+  {
+    name: "muShanghai",
+    href: "https://mushanghai.xyz/",
+    src: "/logos-community/mushanghai.png",
+    width: 256,
+    height: 80,
+  },
+  {
+    name: "p2pmentor",
+    href: "https://p2pmentor.com/",
+    src: "/logos-community/p2pmentor.jpg",
+    width: 222,
+    height: 222,
+    showLabel: true,
+  },
+  {
+    name: "Privote",
+    href: "https://privote.live/",
+    src: "/logos-community/privote.svg",
+    width: 662,
+    height: 662,
+    showLabel: true,
+  },
+  {
+    name: "ProtoVille",
+    href: "https://protoville.xyz/",
+    src: "/logos-community/protoville-mark.png",
+    width: 630,
+    height: 630,
+    circular: true,
+    showLabel: true,
+  },
+  {
+    name: "RegistryChain",
+    href: "https://registrychain.com/",
+    src: "/logos-community/registrychain.png",
+    width: 5216,
+    height: 1768,
+  },
+  {
+    name: "Seapunk",
+    href: "https://seapunk.asia",
+    src: "/logo-seapunk.png",
+    width: 440,
+    height: 260,
+    scale: 1.1,
+  },
+  {
+    name: "SocraticBot",
+    href: "https://socratic.bot/",
+    src: "/logos-community/socratic-bot.png",
+    width: 3000,
+    height: 612,
+  },
+  {
+    name: "SUCI",
+    href: "https://www.suci.io/",
+    src: "/logos-community/suci-logotype.png",
+    width: 1024,
+    height: 505,
+    unoptimized: true,
+  },
+  {
+    name: "Swarm",
+    href: "https://www.ethswarm.org/",
+    src: "/logos-community/swarm-horizontal.png",
+    width: 1024,
+    height: 270,
+    unoptimized: true,
+  },
+  {
     name: "Web3Privacy",
     href: "https://web3privacy.info/",
     src: "/logos-community/web3privacy.svg",
     width: 236,
     height: 64,
     invert: true,
+  },
+  {
+    name: "zkSync",
+    href: "https://zksync.io/",
+    src: "/logos-community/zksync.png",
+    width: 1875,
+    height: 368,
   },
 ] as const;
 
@@ -273,9 +303,6 @@ export default function Home() {
             <a className={styles.secondaryCta} href={links.applyInvite} target="_blank" rel="noopener noreferrer">
               Apply to Network School
             </a>
-            <a className={styles.secondaryCta} href="#participation-outcomes">
-              Learn More
-            </a>
             <a
               className={styles.secondaryCta}
               href={links.lumaCalendar}
@@ -284,17 +311,13 @@ export default function Home() {
             >
               Calendar
             </a>
+            <a className={styles.secondaryCta} href="#participation-outcomes">
+              Learn More
+            </a>
           </div>
           <div className={styles.heroArt}>
             <HeroArtImage />
           </div>
-        </section>
-
-        <HeroVideo src={heroVideoSrc} />
-
-        <section id="participation-outcomes" className={styles.section}>
-          <h2>Participation Outcomes</h2>
-          <ParticipationOutcomesTabs />
         </section>
 
         <div className={styles.partnerLogoStack}>
@@ -306,6 +329,13 @@ export default function Home() {
             aria-label="Community and ecosystem logos"
           />
         </div>
+
+        <HeroVideo src={heroVideoSrc} />
+
+        <section id="participation-outcomes" className={styles.section}>
+          <h2>Participation Outcomes</h2>
+          <ParticipationOutcomesTabs />
+        </section>
 
         <section className={styles.section}>
           <h2>FAQ</h2>

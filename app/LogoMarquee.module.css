@@ -114,6 +114,7 @@
 
 .logoMarqueeSectionSubtle .marqueeBeltStatic {
   row-gap: 0.55rem;
+  justify-content: space-evenly;
 }
 
 .logoMarqueeSectionSubtle .logoMarqueeItem {
@@ -125,9 +126,9 @@
   opacity: 0.82;
 }
 
-/* Normalize subtle row: ignore per-logo --logo-scale; cap both dimensions so aspect ratio holds. */
+/* Cap both dimensions so aspect ratio holds; per-logo --logo-scale still applies. */
 .logoMarqueeSectionSubtle .logoMarqueeImage {
-  --logo-scale: 1 !important;
+  --logo-scale: 1;
   box-sizing: border-box;
   height: auto;
   width: auto;
