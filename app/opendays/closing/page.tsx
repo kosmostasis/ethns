@@ -90,6 +90,9 @@ export default function ClosingPartyPage() {
             <Link className={styles.dateButton} href="/opendays/closing" aria-current="page">
               Closing
             </Link>
+            <Link className={styles.dateButton} href="/opendays/hackathon">
+              Hackathon
+            </Link>
           </div>
           <h1>
             Closing Celebration
