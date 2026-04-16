@@ -72,6 +72,14 @@ const communityLogos = [
     height: 320,
   },
   {
+    name: "ProtoVille",
+    href: "https://protoville.xyz/",
+    src: "/logos-community/protoville-mark.png",
+    width: 630,
+    height: 630,
+    showLabel: true,
+  },
+  {
     name: "Seapunk",
     href: "https://seapunk.asia",
     src: "/logo-seapunk.png",
