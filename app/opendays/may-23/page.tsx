@@ -90,6 +90,9 @@ export default function May23OpenDayPage() {
             <Link className={styles.dateButton} href="/opendays/closing">
               Closing Party
             </Link>
+            <Link className={styles.dateButton} href="/opendays/hackathon">
+              Hackathon
+            </Link>
           </div>
           <h1>
             Open Hardware & DePIN Open Day
