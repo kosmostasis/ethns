@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 180" role="img" aria-labelledby="title">
+  <title>ProtoVille</title>
+  <rect width="760" height="180" fill="none"/>
+  <g fill="#1f1d29">
+    <path d="M78 42c-27 0-48 21-48 48s21 48 48 48h14v-24H78c-13 0-24-11-24-24s11-24 24-24h14V42H78z"/>
+    <path d="M150 42h24l34 96h-25l-6-18h-30l-6 18h-25l34-96zm4 58h16l-8-24-8 24z"/>
+    <text x="226" y="112" font-family="Inter, Arial, sans-serif" font-size="68" font-weight="700" letter-spacing="-1">
+      ProtoVille
+    </text>
+  </g>
+</svg>
