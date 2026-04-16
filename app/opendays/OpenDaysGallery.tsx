@@ -15,12 +15,16 @@ const galleryImages = [
 
 const AUTO_ADVANCE_MS = 5000;
 
-export default function OpenDaysGallery() {
+type OpenDaysGalleryProps = {
+  images?: readonly string[];
+};
+
+export default function OpenDaysGallery({ images = galleryImages }: OpenDaysGalleryProps) {
   // Start on the first real slide (index 1) because we render a clone at each end.
   const [index, setIndex] = useState(1);
   const [animate, setAnimate] = useState(true);
-  const total = galleryImages.length;
-  const slides = [galleryImages[total - 1], ...galleryImages, galleryImages[0]];
+  const total = images.length;
+  const slides = [images[total - 1], ...images, images[0]];
 
   useEffect(() => {
     const timer = window.setInterval(() => {
