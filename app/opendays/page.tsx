@@ -130,7 +130,7 @@ export default function OneDayPage() {
         </section>
 
         <section id="event-details" className={styles.section} aria-labelledby="costs-heading">
-          <h2 id="costs-heading">Sponsor our Open Day on May 16th</h2>
+          <h2 id="costs-heading">Join our Open Day on May 16th</h2>
           <p>
             Our month of Ethereum-focused programming at Network School will open on May 16th to builders, founders,
             investors, institutions, researchers, and other leaders from the wider EVM world.
