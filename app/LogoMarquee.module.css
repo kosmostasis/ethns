@@ -89,6 +89,10 @@
   object-fit: contain;
 }
 
+.logoMarqueeImageCircular {
+  border-radius: 9999px;
+}
+
 .logoMarqueeImageInvert {
   filter: invert(1);
 }
