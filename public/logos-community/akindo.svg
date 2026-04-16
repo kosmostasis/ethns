@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 180" role="img" aria-labelledby="title">
+  <title>AKINDO</title>
+  <rect width="640" height="180" fill="none"/>
+  <g fill="#1f1d29">
+    <circle cx="78" cy="90" r="28"/>
+    <path d="M118 128 152 52h24l34 76h-24l-6-14h-32l-6 14h-24zm45-54-9 22h18l-9-22z"/>
+    <text x="230" y="114" font-family="Inter, Arial, sans-serif" font-size="68" font-weight="700" letter-spacing="2">
+      AKINDO
+    </text>
+  </g>
+</svg>
