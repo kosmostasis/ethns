@@ -149,7 +149,11 @@ export default function HackathonPage() {
               <p>
                 You can join us by sponsoring a bounty starting at 500 USD or the equivalent. Bounties will be curated by the
                 Network School team and will be announced in the weeks leading up to the hackathon. The hackathon will be hosted
-                on campus, leveraging our own Earn platform. You can review the live platform used in the recent Zcash hackathon.
+                on campus, leveraging our own Earn platform. You can review the live platform used in the recent{" "}
+                <a href="https://ns.com/zcash" target="_blank" rel="noopener noreferrer">
+                  Zcash hackathon
+                </a>
+                .
               </p>
               <p>
                 Please{" "}
