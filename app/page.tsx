@@ -77,6 +77,7 @@ const communityLogos = [
     src: "/logos-community/protoville-mark.png",
     width: 630,
     height: 630,
+    circular: true,
     showLabel: true,
   },
   {
