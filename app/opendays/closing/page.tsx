@@ -88,7 +88,7 @@ export default function ClosingPartyPage() {
               May 23rd
             </Link>
             <Link className={styles.dateButton} href="/opendays/closing" aria-current="page">
-              Closing
+              Closing Party
             </Link>
             <Link className={styles.dateButton} href="/opendays/hackathon">
               Hackathon
