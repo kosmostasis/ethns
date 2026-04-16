@@ -125,7 +125,7 @@ export default function May23OpenDayPage() {
         </section>
 
         <section id="event-details" className={styles.section} aria-labelledby="costs-heading">
-          <h2 id="costs-heading">Sponsor our Open Day on May 23rd</h2>
+          <h2 id="costs-heading">Join our Open Day on May 23rd</h2>
           <p>
             Our month of Ethereum-focused programming at Network School will open a second time on May 23rd to builders, founders,
             investors, institutions, researchers, and other leaders focused on the growing space of open hardware and DePIN.
