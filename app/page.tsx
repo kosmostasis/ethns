@@ -47,6 +47,30 @@ const partnerLogos = [
     width: 88,
     height: 88,
   },
+] as const;
+
+const communityLogos = [
+  {
+    name: "AKINDO",
+    href: "https://akindo.io/",
+    src: "/logos-community/akindo.svg",
+    width: 640,
+    height: 180,
+  },
+  {
+    name: "Devfolio",
+    href: "https://devfolio.co/",
+    src: "/logos-community/devfolio.svg",
+    width: 640,
+    height: 180,
+  },
+  {
+    name: "ProtoVille",
+    href: "https://protoville.xyz/",
+    src: "/logos-community/protoville.svg",
+    width: 760,
+    height: 180,
+  },
   {
     name: "Seapunk",
     href: "https://seapunk.asia",
@@ -55,9 +79,6 @@ const partnerLogos = [
     height: 260,
     scale: 1.1,
   },
-] as const;
-
-const communityLogos = [
   {
     name: "Kernel",
     href: "https://kernel.community/",
