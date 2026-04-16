@@ -9,6 +9,8 @@ export type LogoMarqueeLogo = {
   width: number;
   height: number;
   scale?: number;
+  /** When true, crops icon-style marks into a circle. */
+  circular?: boolean;
   /** When true, inverts raster colors (e.g. white mark → dark on a light page). */
   invert?: boolean;
   /** When true, serves the file as-is (helps RGBA PNG alpha through the image optimizer). */
@@ -60,7 +62,13 @@ function renderLogoRow(
         width={logo.width}
         height={logo.height}
         unoptimized={logo.unoptimized === true}
-        className={[imageClass, logo.invert ? styles.logoMarqueeImageInvert : ""].filter(Boolean).join(" ")}
+        className={[
+          imageClass,
+          logo.circular ? styles.logoMarqueeImageCircular : "",
+          logo.invert ? styles.logoMarqueeImageInvert : "",
+        ]
+          .filter(Boolean)
+          .join(" ")}
         style={{ "--logo-scale": logo.scale != null ? logo.scale : 1 } as CSSProperties}
       />
       {logo.showLabel && <span className={styles.logoMarqueeLabel}>{logo.name}</span>}
