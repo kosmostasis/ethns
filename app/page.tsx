@@ -65,11 +65,11 @@ const communityLogos = [
     height: 180,
   },
   {
-    name: "ProtoVille",
-    href: "https://protoville.xyz/",
-    src: "/logos-community/protoville.svg",
-    width: 760,
-    height: 180,
+    name: "Arkiv",
+    href: "https://arkiv.network/",
+    src: "/logos-community/arkiv.svg",
+    width: 1389,
+    height: 320,
   },
   {
     name: "Seapunk",
