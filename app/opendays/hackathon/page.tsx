@@ -133,30 +133,30 @@ export default function HackathonPage() {
         </section>
 
         <section id="event-details" className={styles.section} aria-labelledby="costs-heading">
-          <h2 id="costs-heading">Join our Official Hackathon</h2>
+          <h2 id="costs-heading">Join our Official Hackathon!</h2>
           <p>
-            Our month of Ethereum-focused programming at Network School will open a second time on May 23rd to builders, founders,
-            investors, institutions, researchers, and other leaders focused on the growing space of open hardware and DePIN.
+            Our month of Ethereum-focused programming at Network School will host an official hackathon for builders and founders
+            looking to build on or integrate with Ethereum-compatible technologies.
           </p>
           <p>
-            Represent your open hardware or DePIN project on stage, and join our +400 members on campus, alongside ~200 builders
-            from Singapore and Kuala Lumpur. You can join us as a speaker and also be highlighted as a title sponsor for the event.
+            Submit a bounty to our hackathon and tap into our +400 members on campus! The bounty can be unique or an already existing
+            challenge which can benefit from in-person collaboration and feedback.
           </p>
 
           <details className={styles.sponsorFaq}>
-            <summary className={styles.sponsorFaqQuestion}>How can I be highlighted and what does sponsorship cover?</summary>
+            <summary className={styles.sponsorFaqQuestion}>How can we participate and what are the logistics?</summary>
             <div className={styles.sponsorTableWrap}>
               <p>
-                You can join us as an sponsor. Sponsorship covers the costs of catering nutritious meals for attendees,
-                A/V rentals, general logistics at NS, and possibly chartered ground transportation from Singapore
-                and/or Kuala Lumpur.
+                You can join us by sponsoring a bounty starting at 500 USD or the equivalent. Bounties will be curated by the
+                Network School team and will be announced in the weeks leading up to the hackathon. The hackathon will be hosted
+                on campus, leveraging our own Earn platform. You can review the live platform used in the recent Zcash hackathon.
               </p>
               <p>
                 Please{" "}
                 <a href={links.quickSync} target="_blank" rel="noopener noreferrer">
                   book a quick sync
                 </a>{" "}
-                with us to discuss sponsorship options.
+                with us to coordinate setting up your bounties.
               </p>
             </div>
           </details>
