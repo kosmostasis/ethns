@@ -723,8 +723,27 @@
     flex-direction: row;
   }
 
+  .hero {
+    padding-top: 0.5rem;
+    padding-bottom: 0;
+  }
+
   .heroImageFrame {
+    width: min(100%, 320px);
     aspect-ratio: 16 / 11;
   }
 
+  .ctas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: stretch;
+    margin-top: 0.6rem;
+  }
+
+  .primaryCta,
+  .secondaryCta {
+    padding: 0.65rem 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
 }
