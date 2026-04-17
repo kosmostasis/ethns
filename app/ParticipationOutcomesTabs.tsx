@@ -115,7 +115,13 @@ const tabs = [
             <ul className={styles.list}>
               <li>Hosts workshops or builder lock-ins in May.</li>
               <li>Promote the event in your ecosystem, and sponsor builders to attend as scholars.</li>
-              <li>Optionally, host a social event or sponsor a hackathon bounty.</li>
+              <li>
+                Join one of our <a href="/opendays">OpenDays</a> on the 16th or 23rd of May.
+              </li>
+              <li>
+                Optionally, host a social event or sponsor a{" "}
+                <a href="/opendays/hackathon">hackathon bounty</a>.
+              </li>
               <li>
                 Have another idea? Please{" "}
                 <a
