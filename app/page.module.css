@@ -723,7 +723,12 @@
     flex-direction: row;
   }
 
+  .hero {
+    padding-top: 1rem;
+  }
+
   .heroImageFrame {
+    width: min(100%, 320px);
     aspect-ratio: 16 / 11;
   }
 
