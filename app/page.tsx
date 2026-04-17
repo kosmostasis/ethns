@@ -231,13 +231,6 @@ const communityLogos = [
     height: 64,
     invert: true,
   },
-  {
-    name: "zkSync",
-    href: "https://zksync.io/",
-    src: "/logos-community/zksync.png",
-    width: 1875,
-    height: 368,
-  },
 ] as const;
 
 const heroVideoSrc = process.env.NEXT_PUBLIC_HERO_VIDEO_URL ?? defaultHeroVideo;
