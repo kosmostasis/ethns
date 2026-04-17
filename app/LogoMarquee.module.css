@@ -168,6 +168,7 @@
   .logoMarqueeSection {
     --marquee-gap: 0.8rem;
     --marquee-duration: var(--marquee-user-duration-mobile, var(--marquee-user-duration, 18s));
+    margin-top: 1rem;
   }
 
   .logoMarqueeImage {
