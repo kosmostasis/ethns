@@ -127,7 +127,7 @@ const communityLogos = [
   },
   {
     name: "Geode",
-    href: "https://geode.finance/",
+    href: "https://geode.build/",
     src: "/logos-community/geode.png",
     width: 2391,
     height: 460,
