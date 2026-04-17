@@ -516,4 +516,14 @@
   .footer {
     width: min(1080px, calc(100% - 1.25rem));
   }
+
+  .dateButton {
+    font-size: 0.78rem;
+    padding: 0.4rem 0.6rem;
+    white-space: nowrap;
+  }
+
+  .ctas {
+    justify-content: center;
+  }
 }
