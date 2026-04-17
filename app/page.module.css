@@ -728,12 +728,15 @@
   }
 
   .ctas {
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: stretch;
   }
 
   .primaryCta,
   .secondaryCta {
     padding: 0.65rem 1rem;
     font-size: 0.9rem;
+    text-align: center;
   }
 }
