@@ -727,4 +727,13 @@
     aspect-ratio: 16 / 11;
   }
 
+  .ctas {
+    flex-wrap: wrap;
+  }
+
+  .primaryCta,
+  .secondaryCta {
+    padding: 0.65rem 1rem;
+    font-size: 0.9rem;
+  }
 }
