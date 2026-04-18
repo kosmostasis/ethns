@@ -36,7 +36,7 @@ export type LogoMarqueeProps = {
   /** Must match CSS `--marquee-loop-delay` / entrance animation duration for clean handoff. */
   entranceDurationMs?: number;
   /** Secondary row: smaller logos, lower opacity, tighter vertical rhythm. */
-  visualWeight?: "default" | "subtle";
+  visualWeight?: "default" | "medium" | "subtle";
   "aria-label"?: string;
   className?: string;
 };
@@ -124,6 +124,7 @@ export default function LogoMarquee({
         [
           styles.logoMarqueeSection,
           visualWeight === "subtle" ? styles.logoMarqueeSectionSubtle : "",
+          visualWeight === "medium" ? styles.logoMarqueeSectionMedium : "",
           className,
         ]
           .filter(Boolean)
