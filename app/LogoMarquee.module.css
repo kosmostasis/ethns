@@ -106,6 +106,28 @@
   margin-left: 0.3rem;
 }
 
+.logoMarqueeSectionMedium {
+  margin: 0 0 1.25rem;
+  --marquee-gap: 1.4rem;
+}
+
+.logoMarqueeSectionMedium .marqueeBeltStatic {
+  justify-content: center;
+  row-gap: 0.65rem;
+}
+
+.logoMarqueeSectionMedium .logoMarqueeItem {
+  opacity: 0.82;
+}
+
+.logoMarqueeSectionMedium .logoMarqueeImage {
+  height: auto;
+  width: auto;
+  max-height: 2.2rem;
+  max-width: min(14rem, 40vw);
+  object-fit: contain;
+}
+
 .logoMarqueeSectionSubtle {
   margin: 0 0 2.25rem;
   /* Tighter than default row: wide wordmarks read better with a slightly smaller rem gap. */
@@ -114,11 +136,10 @@
 
 .logoMarqueeSectionSubtle .marqueeBeltStatic {
   row-gap: 0.55rem;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .logoMarqueeSectionSubtle .logoMarqueeItem {
-  min-width: 7.5rem;
   opacity: 0.62;
 }
 

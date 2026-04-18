@@ -23,9 +23,10 @@ const links = {
   hackmdOutreach: "https://hackmd.io/@kosmostasis/ETHNSoutreach",
   ethereumAssets: "https://ethereum.org/assets/",
   lumaCalendar: "https://luma.com/ethns",
+  xProfile: "https://x.com/nsethereum",
 } as const;
 
-const partnerLogos = [
+const partnerLogosTop = [
   {
     name: "Network School",
     href: "https://ns.com",
@@ -34,11 +35,22 @@ const partnerLogos = [
     height: 32,
   },
   {
-    name: "Invisible Garden",
-    href: "https://invisible.garden",
-    src: "/logo-invisible-garden.png",
-    width: 578,
-    height: 209,
+    name: "ETHNS",
+    href: "https://ns.com/ethns",
+    src: "/logos-community/ethnslogo.png",
+    width: 187,
+    height: 325,
+    showLabel: true,
+  },
+] as const;
+
+const partnerLogos = [
+  {
+    name: "Arkiv",
+    href: "https://arkiv.network/",
+    src: "/logos-community/arkiv.svg",
+    width: 1389,
+    height: 320,
   },
   {
     name: "Base",
@@ -47,6 +59,39 @@ const partnerLogos = [
     width: 88,
     height: 88,
   },
+  {
+    name: "CrossBar",
+    href: "https://www.crossbar-inc.com/",
+    src: "/logos-community/crossbar.svg",
+    width: 1182,
+    height: 549,
+    scale: 1.6,
+  },
+  {
+    name: "Logos",
+    href: "https://logos.co/",
+    src: "/logos-community/logos.jpg",
+    width: 400,
+    height: 400,
+    circular: true,
+    showLabel: true,
+  },
+  {
+    name: "Swarm",
+    href: "https://www.ethswarm.org/",
+    src: "/logos-community/swarm-horizontal.png",
+    width: 1024,
+    height: 270,
+    unoptimized: true,
+  },
+  {
+    name: "Web3Privacy",
+    href: "https://web3privacy.info/",
+    src: "/logos-community/web3privacy.svg",
+    width: 236,
+    height: 64,
+    invert: true,
+  },
 ] as const;
 
 const communityLogos = [
@@ -54,15 +99,8 @@ const communityLogos = [
     name: "AKINDO",
     href: "https://akindo.io/",
     src: "/logos-community/akindo.svg",
-    width: 640,
-    height: 180,
-  },
-  {
-    name: "Arkiv",
-    href: "https://arkiv.network/",
-    src: "/logos-community/arkiv.svg",
-    width: 1389,
-    height: 320,
+    width: 311,
+    height: 63,
   },
   {
     name: "AyaHQ",
@@ -81,19 +119,18 @@ const communityLogos = [
     showLabel: true,
   },
   {
-    name: "CrossBar",
-    href: "https://www.crossbar-inc.com/",
-    src: "/logos-community/crossbar.svg",
-    width: 1182,
-    height: 549,
-    scale: 1.6,
-  },
-  {
     name: "Devfolio",
     href: "https://devfolio.co/",
     src: "/logos-community/devfolio.svg",
-    width: 640,
-    height: 180,
+    width: 619,
+    height: 129,
+  },
+  {
+    name: "ETHGlobal",
+    href: "https://ethglobal.com/",
+    src: "/logos-community/ethglobal.png",
+    width: 1346,
+    height: 301,
   },
   {
     name: "ETHKL",
@@ -138,6 +175,13 @@ const communityLogos = [
     src: "/logos-community/hubsnetwork.png",
     width: 1127,
     height: 349,
+  },
+  {
+    name: "Invisible Garden",
+    href: "https://invisible.garden",
+    src: "/logo-invisible-garden.png",
+    width: 578,
+    height: 209,
   },
   {
     name: "Kernel",
@@ -215,22 +259,6 @@ const communityLogos = [
     height: 505,
     unoptimized: true,
   },
-  {
-    name: "Swarm",
-    href: "https://www.ethswarm.org/",
-    src: "/logos-community/swarm-horizontal.png",
-    width: 1024,
-    height: 270,
-    unoptimized: true,
-  },
-  {
-    name: "Web3Privacy",
-    href: "https://web3privacy.info/",
-    src: "/logos-community/web3privacy.svg",
-    width: 236,
-    height: 64,
-    invert: true,
-  },
 ] as const;
 
 const heroVideoSrc = process.env.NEXT_PUBLIC_HERO_VIDEO_URL ?? defaultHeroVideo;
@@ -271,6 +299,9 @@ export default function Home() {
           </span>
         </div>
         <nav className={styles.nav}>
+          <a href={links.xProfile} target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+            <Image src="/x-icon.svg" alt="" width={20} height={20} className={styles.navIcon} />
+          </a>
           <a href={links.lumaCalendar} target="_blank" rel="noopener noreferrer" aria-label="Luma">
             <Image src="/calendar-icon.svg" alt="" width={20} height={20} className={styles.navIcon} />
           </a>
@@ -314,7 +345,8 @@ export default function Home() {
         </section>
 
         <div className={styles.partnerLogoStack}>
-          <LogoMarquee logos={partnerLogos} static />
+          <LogoMarquee logos={partnerLogosTop} static aria-label="Top partner logos" />
+          <LogoMarquee logos={partnerLogos} static visualWeight="medium" aria-label="Partner logos" />
           <LogoMarquee
             logos={communityLogos}
             static
