@@ -119,6 +119,13 @@ const communityLogos = [
     showLabel: true,
   },
   {
+    name: "ContentDAO",
+    href: "https://contentdao.app/",
+    src: "/logos-community/contentdao-site.svg",
+    width: 165,
+    height: 38,
+  },
+  {
     name: "Devfolio",
     href: "https://devfolio.co/",
     src: "/logos-community/devfolio.svg",
@@ -221,6 +228,13 @@ const communityLogos = [
     showLabel: true,
   },
   {
+    name: "ProtocolCamp",
+    href: "https://www.protocolcamp.com/",
+    src: "https://www.protocolcamp.com/assets/figma-01-u52w3qYl.webp",
+    width: 1345,
+    height: 315,
+  },
+  {
     name: "ProtoVille",
     href: "https://protoville.xyz/",
     src: "/logos-community/protoville-mark.png",
@@ -228,6 +242,13 @@ const communityLogos = [
     height: 630,
     circular: true,
     showLabel: true,
+  },
+  {
+    name: "RadicalXChange",
+    href: "https://radicalxchange.org/",
+    src: "/logos-community/radicalxchange-logo.png",
+    width: 4070,
+    height: 691,
   },
   {
     name: "RegistryChain",
@@ -258,6 +279,14 @@ const communityLogos = [
     width: 1024,
     height: 505,
     unoptimized: true,
+  },
+  {
+    name: "ZuKaş",
+    href: "https://zukascity.com/",
+    src: "/logos-community/zukascity.png",
+    width: 128,
+    height: 128,
+    showLabel: true,
   },
 ] as const;
 
