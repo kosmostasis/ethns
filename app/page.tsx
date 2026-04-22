@@ -68,6 +68,13 @@ const partnerLogos = [
     scale: 1.6,
   },
   {
+    name: "ETHPrague",
+    href: "https://ethprague.com/",
+    src: "/logos-community/ethprague-logo-digital-black.png",
+    width: 2000,
+    height: 570,
+  },
+  {
     name: "Logos",
     href: "https://logos.co/",
     src: "/logos-community/logos.jpg",
@@ -168,6 +175,13 @@ const communityLogos = [
     src: "/logos-community/fracton.png",
     width: 2285,
     height: 764,
+  },
+  {
+    name: "Frontier Tower",
+    href: "https://frontiertower.io/",
+    src: "/logos-community/frontiertower-logo-transparent.png",
+    width: 464,
+    height: 130,
   },
   {
     name: "Geode",
