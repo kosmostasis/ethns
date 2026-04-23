@@ -1,6 +1,6 @@
 import Image from "next/image";
-import HeroArtImage from "./HeroArtImage";
 import LogoMarquee from "./LogoMarquee";
+import UpcomingEvents from "./UpcomingEvents";
 import HeroVideo from "./HeroVideo";
 import ParticipationOutcomesTabs from "./ParticipationOutcomesTabs";
 import SponsorFaq from "./SponsorFaq";
@@ -23,6 +23,7 @@ const links = {
   hackmdOutreach: "https://hackmd.io/@kosmostasis/ETHNSoutreach",
   ethereumAssets: "https://ethereum.org/assets/",
   lumaCalendar: "https://luma.com/ethns",
+  applyOnCampus: "https://ns.com/ethns/apply",
   xProfile: "https://x.com/nsethereum",
 } as const;
 
@@ -304,6 +305,97 @@ const communityLogos = [
   },
 ] as const;
 
+const upcomingEvents = [
+  {
+    date: "Apr 25",
+    title: "Malaysia is an Ethereum Hub for Builders: Meetup with ETHKL x ETHNS",
+    href: "https://luma.com/cz0cpqtn",
+    location: "Kuala Lumpur",
+  },
+  {
+    date: "Apr 28",
+    title: "Beyond Software: Advancing Crypto Wallet Security Against Hacks and Hardware Backdoors",
+    href: "https://luma.com/w108uqsn",
+    location: "Network School",
+  },
+  {
+    date: "Apr 28",
+    title: "Ethereum Meetup",
+    href: "https://luma.com/yfbgi4zy",
+    location: "Network School",
+  },
+  {
+    date: "Apr 30",
+    title: "ETHGlobal Open Agents Async Hackathon Cowork & Feedback Session",
+    href: "https://luma.com/owsy13c1",
+  },
+  {
+    date: "May 2",
+    title: "Network School Monthly All Hands & Ethereum Month Kick-Off",
+    href: "https://luma.com/ethns",
+  },
+  {
+    date: "May 4",
+    title: "ETHGlobal Open Agents Hackathon Deadline",
+    href: "https://luma.com/ethns",
+  },
+  {
+    date: "May 7",
+    title: "Base x Virtuals Humanoid Robot Demo Day",
+    href: "https://luma.com/ethns",
+  },
+  {
+    date: "May 8",
+    title: "Base Builder Loft @ Network School Launch Party",
+    href: "https://luma.com/ethns",
+  },
+  {
+    date: "May 9",
+    title: "Viber Hackathon",
+    href: "https://luma.com/ethns",
+  },
+  {
+    date: "May 14",
+    title: "RadicalXChange Plurality Event",
+    href: "https://luma.com/ethns",
+  },
+  {
+    date: "May 16",
+    title: "OPEN DAY: EVM Day + Arkiv Builder Challenge & Crossbar Content Challenge Kick-Off",
+    href: "https://luma.com/67p1p7sv",
+  },
+  {
+    date: "May 22",
+    title: "Monthly Network School Showcase and Fancy Dinner Party",
+    href: "https://luma.com/ethns",
+  },
+  {
+    date: "May 23",
+    title: "OPEN DAY: Open Hardware Day",
+    href: "https://luma.com/qsko9o3g",
+  },
+  {
+    date: "May 24",
+    title: "OPEN DAY: Logos Privacy Buildathon",
+    href: "https://luma.com/175r14iy",
+  },
+  {
+    date: "May 25",
+    title: "Arkiv Builder Challenge & Crossbar Content Challenge Deadlines",
+    href: "https://luma.com/ethns",
+  },
+  {
+    date: "May 29",
+    title: "ETH Month Closing Dinner",
+    href: "https://luma.com/ethns",
+  },
+  {
+    date: "May 30",
+    title: "ETHKL x ETHNS Joint Meetup in KL",
+    href: "https://luma.com/ethns",
+  },
+] as const;
+
 const heroVideoSrc = process.env.NEXT_PUBLIC_HERO_VIDEO_URL ?? defaultHeroVideo;
 
 export default function Home() {
@@ -353,39 +445,50 @@ export default function Home() {
 
       <main>
         <section className={styles.hero}>
-          <p className={styles.eyebrow}>May 2026: Genesis Block Month</p>
-          <h1>
-            Ethereum NS
-            <br />
-            <span className={styles.heroSubhead}>Summon your community from the cloud to Network School</span>
-          </h1>
-          <p className={styles.lead}>
-            A permanent ETH node at NS. Built for talent development, hackathons, and builder lock-ins, rooted in
-            Ethereum&apos;s values and self-sovereignty.
-          </p>
-          <div className={styles.ctas}>
-            <a className={styles.primaryCta} href={links.quickSync} target="_blank" rel="noopener noreferrer">
-              Book a Quick Sync
-            </a>
-            <a className={styles.secondaryCta} href={links.applyInvite} target="_blank" rel="noopener noreferrer">
-              Apply to Network School
-            </a>
-            <a
-              className={styles.secondaryCta}
-              href={links.lumaCalendar}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Calendar
-            </a>
-            <a className={styles.secondaryCta} href="#participation-outcomes">
-              Learn More
-            </a>
+          <div className={styles.heroText}>
+            <p className={styles.eyebrow}>May 2026: Genesis Block Month</p>
+            <h1>
+              Ethereum NS
+              <br />
+              <span className={styles.heroSubhead}>is a permanent Ethereum community node growing at Network School.</span>
+            </h1>
+            <p className={styles.lead}>
+              We collaborate with Malaysian, Singaporean, and the wider Asian communities to share technical knowledge,
+              debate cosmolocal challenges, and build techno-optimist futures together.
+            </p>
+            <div className={styles.ctas}>
+              <a className={styles.primaryCta} href={links.applyOnCampus} target="_blank" rel="noopener noreferrer">
+                Apply to NS
+              </a>
+              <a className={styles.secondaryCta} href={links.lumaCalendar} target="_blank" rel="noopener noreferrer">
+                Events Calendar
+              </a>
+              <a className={styles.secondaryCta} href={links.quickSync} target="_blank" rel="noopener noreferrer">
+                Book a Quick Sync
+              </a>
+            </div>
           </div>
-          <div className={styles.heroArt}>
-            <HeroArtImage />
+
+          <div className={styles.heroPhotoPanel} aria-label="Latest events photos">
+            <div className={styles.stripHeader}>
+              <h2 className={styles.stripTitle}>Latest Events</h2>
+            </div>
+            <div className={styles.singlePhotoWrap}>
+              <Image
+                src="/eventpics/openagentskickoff.JPG"
+                alt="ETHGlobal Open Agents Hackathon Kick-Off"
+                fill
+                className={styles.photoThumbImg}
+                sizes="(max-width: 900px) 100vw, 40vw"
+              />
+            </div>
+            <p className={styles.photoCaption}>April 23rd, 2026 · ETHGlobal Open Agents Hackathon Kick-Off</p>
           </div>
         </section>
+
+        <div className={styles.upcomingStrip} aria-label="Upcoming events">
+          <UpcomingEvents events={upcomingEvents} />
+        </div>
 
         <div className={styles.partnerLogoStack}>
           <LogoMarquee logos={partnerLogosTop} static aria-label="Top partner logos" />
@@ -401,7 +504,7 @@ export default function Home() {
         <HeroVideo src={heroVideoSrc} />
 
         <section id="participation-outcomes" className={styles.section}>
-          <h2>Participation Outcomes</h2>
+          <h2>Life at Network School</h2>
           <ParticipationOutcomesTabs />
         </section>
 
@@ -411,9 +514,8 @@ export default function Home() {
             <details className={styles.faqItem}>
               <summary className={styles.faqQuestion}>General Logistics Overview</summary>
               <p className={styles.faqAnswer}>
-                Ethereum NS runs throughout May 2026 at Network School. Teams and builders joining
-                through the referral flow receive 25% pricing support and full residency access.
-                Full details for logistics are provided by Network School directly upon acceptance.
+                Ethereum NS is a permanent Ethereum community node at Network School. May 2026 is
+                our first Ethereum-focused &ldquo;genesis block&rdquo; month.
               </p>
             </details>
             <SponsorFaq />

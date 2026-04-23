@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     icon: [{ url: "/icon.png", type: "image/png", sizes: "512x512" }],
     apple: [{ url: "/icon.png", type: "image/png", sizes: "512x512" }],
   },
-  title: "Ethereum NS at Network School | May 2026",
+  title: "Ethereum NS at Network School",
   description:
     "A one-month Ethereum residency at Network School for workshops, builder lock-ins, and ecosystem hackathons.",
   openGraph: {
-    title: "Ethereum NS at Network School | May 2026",
+    title: "Ethereum NS at Network School",
     description:
-      "Partner with Ethereum NS to sponsor builders, teach workshops, or host a hackathon in May 2026.",
+      "Partner with Ethereum NS to sponsor builders, teach workshops, or host a hackathon.",
     url: "https://ethns.io",
     siteName: "Ethereum NS",
     type: "website",
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ethereum NS at Network School | May 2026",
+    title: "Ethereum NS at Network School",
     description:
-      "Partner with Ethereum NS to sponsor builders, teach workshops, or host a hackathon in May 2026.",
+      "Partner with Ethereum NS to sponsor builders, teach workshops, or host a hackathon.",
     images: ["https://ethns.io/opengraph-image.jpg"],
   },
 };

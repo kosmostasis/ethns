@@ -74,7 +74,7 @@ const items: FaqItem[] = [
       "Yes, you can partner with ETH NS anytime. We are committed to host Ethereum-related programming permanently at Network School, and we can co-organize tailored programming for your ecosystem and community.",
   },
   {
-    question: "What's the programming for May going to be like?",
+    question: "What does programming look like at Network School?",
     answerNode: (
       <>
         Confirmed events will be part of the official{" "}
