@@ -94,7 +94,7 @@ const tabs = [
         <div className={styles.cards}>
           <article id="sponsor" className={styles.card}>
             <h3>Sponsor Builders</h3>
-            <p>Bring teams and support scholars while connecting with high-agency builders during our Genesis residency.</p>
+            <p>Bring teams and support scholars while connecting with high-agency builders.</p>
           </article>
           <article id="teach" className={styles.card}>
             <h3>Teach Your Tech Stack</h3>
@@ -113,7 +113,7 @@ const tabs = [
             </summary>
             <p>Any combination of the actions below can qualify your team:</p>
             <ul className={styles.list}>
-              <li>Hosts workshops or builder lock-ins in May.</li>
+              <li>Host workshops or builder lock-ins.</li>
               <li>Promote the event in your ecosystem, and sponsor builders to attend as scholars.</li>
               <li>Optionally, host a social event or sponsor a hackathon bounty.</li>
               <li>
