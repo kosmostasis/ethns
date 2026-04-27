@@ -66,7 +66,7 @@ const partnerLogos = [
     src: "/logos-community/crossbar.svg",
     width: 1182,
     height: 549,
-    scale: 1.6,
+    scale: 1.8,
   },
   {
     name: "ETHPrague",
@@ -119,6 +119,13 @@ const communityLogos = [
     invert: true,
   },
   {
+    name: "Augmi",
+    href: "https://augmi.world/",
+    src: "/logos-community/augmi-wordmark.svg",
+    width: 388,
+    height: 120,
+  },
+  {
     name: "Commons Hub",
     href: "https://www.commons-hub.at/",
     src: "/logos-remote/commons-hub.ico",
@@ -132,6 +139,14 @@ const communityLogos = [
     src: "/logos-community/contentdao-site.svg",
     width: 165,
     height: 38,
+  },
+  {
+    name: "Dappit",
+    href: "https://dappit.io/",
+    src: "/logos-community/dappit.svg",
+    width: 189,
+    height: 175,
+    showLabel: true,
   },
   {
     name: "Devfolio",
@@ -185,6 +200,14 @@ const communityLogos = [
     height: 130,
   },
   {
+    name: "",
+    href: "https://f.xyz/",
+    src: "/logos-community/f-xyz.png",
+    width: 128,
+    height: 128,
+    showLabel: true,
+  },
+  {
     name: "Geode",
     href: "https://geode.build/",
     src: "/logos-community/geode.png",
@@ -218,6 +241,14 @@ const communityLogos = [
     src: "/logos-community/metropolis.png",
     width: 768,
     height: 173,
+  },
+  {
+    name: "Nammu",
+    href: "https://nammu.finance/",
+    src: "/logos-community/nammu-finance.png",
+    width: 128,
+    height: 128,
+    showLabel: true,
   },
   {
     name: "muShanghai",
