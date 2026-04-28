@@ -3,6 +3,7 @@ import LogoMarquee from "./LogoMarquee";
 import UpcomingEvents from "./UpcomingEvents";
 import HeroVideo from "./HeroVideo";
 import ParticipationOutcomesTabs from "./ParticipationOutcomesTabs";
+import EventPhotoCarousel from "./EventPhotoCarousel";
 import SponsorFaq from "./SponsorFaq";
 import styles from "./page.module.css";
 
@@ -24,7 +25,7 @@ const links = {
   ethereumAssets: "https://ethereum.org/assets/",
   lumaCalendar: "https://luma.com/ethns",
   applyOnCampus: "https://ns.com/ethns/apply",
-  xProfile: "https://x.com/nsethereum",
+  telegram: "https://t.me/nsethereum",
 } as const;
 
 const partnerLogosTop = [
@@ -465,8 +466,8 @@ export default function Home() {
           </span>
         </div>
         <nav className={styles.nav}>
-          <a href={links.xProfile} target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
-            <Image src="/x-icon.svg" alt="" width={20} height={20} className={styles.navIcon} />
+<a href={links.telegram} target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+            <Image src="/telegram-icon.svg" alt="" width={20} height={20} className={styles.navIcon} />
           </a>
           <a href={links.lumaCalendar} target="_blank" rel="noopener noreferrer" aria-label="Luma">
             <Image src="/calendar-icon.svg" alt="" width={20} height={20} className={styles.navIcon} />
@@ -500,21 +501,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className={styles.heroPhotoPanel} aria-label="Latest events photos">
-            <div className={styles.stripHeader}>
-              <h2 className={styles.stripTitle}>Latest Events</h2>
-            </div>
-            <div className={styles.singlePhotoWrap}>
-              <Image
-                src="/eventpics/openagentskickoff.JPG"
-                alt="ETHGlobal Open Agents Hackathon Kick-Off"
-                fill
-                className={styles.photoThumbImg}
-                sizes="(max-width: 900px) 100vw, 40vw"
-              />
-            </div>
-            <p className={styles.photoCaption}>April 23rd, 2026 · ETHGlobal Open Agents Hackathon Kick-Off</p>
-          </div>
+          <EventPhotoCarousel />
         </section>
 
         <div className={styles.upcomingStrip} aria-label="Upcoming events">
