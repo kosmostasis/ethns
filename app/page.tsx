@@ -70,20 +70,11 @@ const partnerLogos = [
     scale: 1.8,
   },
   {
-    name: "ETHPrague",
-    href: "https://ethprague.com/",
-    src: "/logos-community/ethprague-logo-digital-black.png",
-    width: 2000,
-    height: 570,
-  },
-  {
     name: "Logos",
     href: "https://logos.co/",
-    src: "/logos-community/logos.jpg",
-    width: 400,
-    height: 400,
-    circular: true,
-    showLabel: true,
+    src: "/logos-community/logos-secondary-transparent-v2.png",
+    width: 1024,
+    height: 379,
   },
   {
     name: "Swarm",
@@ -104,6 +95,13 @@ const partnerLogos = [
 ] as const;
 
 const communityLogos = [
+  {
+    name: "4Seas",
+    href: "https://www.4seas.xyz/",
+    src: "/logos-community/4seas.png",
+    width: 500,
+    height: 113,
+  },
   {
     name: "AKINDO",
     href: "https://akindo.io/",
@@ -162,6 +160,13 @@ const communityLogos = [
     src: "/logos-community/ethglobal.png",
     width: 1346,
     height: 301,
+  },
+  {
+    name: "ETHPrague",
+    href: "https://ethprague.com/",
+    src: "/logos-community/ethprague-logo-digital-black.png",
+    width: 2000,
+    height: 570,
   },
   {
     name: "ETHKL",
@@ -264,6 +269,7 @@ const communityLogos = [
     src: "/logos-community/p2pmentor.jpg",
     width: 222,
     height: 222,
+    circular: true,
     showLabel: true,
   },
   {
@@ -318,6 +324,13 @@ const communityLogos = [
     src: "/logos-community/socratic-bot.png",
     width: 3000,
     height: 612,
+  },
+  {
+    name: "Viber",
+    href: "https://viber.global/",
+    src: "/logos-community/viber.png",
+    width: 2560,
+    height: 917,
   },
   {
     name: "SUCI",
