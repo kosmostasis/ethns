@@ -8,6 +8,8 @@ export type LogoMarqueeLogo = {
   src: string;
   width: number;
   height: number;
+  /** Optional per-logo opacity override (useful for low-contrast marks). */
+  itemOpacity?: number;
   scale?: number;
   /** When true, crops icon-style marks into a circle. */
   circular?: boolean;
@@ -55,6 +57,7 @@ function renderLogoRow(
       rel="noopener noreferrer"
       aria-label={logo.name}
       className={itemClass}
+      style={logo.itemOpacity != null ? ({ opacity: logo.itemOpacity } as CSSProperties) : undefined}
     >
       <Image
         src={logo.src}
