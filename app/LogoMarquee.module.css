@@ -3,7 +3,7 @@
    shifts cannot desync the loop distance (unlike a JS-measured --marquee-travel-px loop). */
 
 .logoMarqueeSection {
-  --marquee-gap: 0.95rem;
+  --marquee-gap: 1.05rem;
   /* Duration: optional inline --marquee-user-duration / --marquee-user-duration-mobile override these */
   --marquee-duration: var(--marquee-user-duration, 34s);
   width: 100%;
@@ -47,7 +47,7 @@
   max-width: 100%;
   justify-content: center;
   flex-wrap: wrap;
-  row-gap: 0.75rem;
+  row-gap: 0.85rem;
   will-change: auto;
 }
 
@@ -74,6 +74,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
+  /* Uniform breathing room around each mark (replaces tight-cropped asset padding in the row). */
+  padding: 0.4rem 0.65rem;
   opacity: 0.94;
   transition: opacity 0.2s ease;
 }
@@ -108,12 +111,12 @@
 
 .logoMarqueeSectionMedium {
   margin: 0 0 1.25rem;
-  --marquee-gap: 1.4rem;
+  --marquee-gap: 1.75rem;
 }
 
 .logoMarqueeSectionMedium .marqueeBeltStatic {
   justify-content: center;
-  row-gap: 0.65rem;
+  row-gap: 0.75rem;
 }
 
 .logoMarqueeSectionMedium .logoMarqueeItem {
@@ -131,7 +134,7 @@
 .logoMarqueeSectionSubtle {
   margin: 0 0 2.25rem;
   /* Tighter than default row: wide wordmarks read better with a slightly smaller rem gap. */
-  --marquee-gap: 0.58rem;
+  --marquee-gap: 0.72rem;
 }
 
 .logoMarqueeSectionSubtle .marqueeBeltStatic {
@@ -206,11 +209,11 @@
   }
 
   .logoMarqueeSectionSubtle {
-    --marquee-gap: 0.5rem;
+    --marquee-gap: 0.55rem;
   }
 
   .logoMarqueeSectionSubtle .marqueeBeltStatic {
-    row-gap: 0.45rem;
+    row-gap: 0.5rem;
   }
 }
 
