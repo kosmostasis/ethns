@@ -198,6 +198,13 @@
   width: min(1080px, calc(100% - 2.5rem));
   margin-inline: auto;
   margin-bottom: 0.75rem;
+  /* Sit above hero / page layers so soft page gradients don’t read through this row on load. */
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+  background-color: var(--bg);
+  border-radius: 12px;
+  padding: 0.2rem 0;
 }
 
 .upcomingHeader {
@@ -210,6 +217,7 @@
 
 .upcomingScrollWrap {
   position: relative;
+  border-radius: inherit;
 }
 
 .upcomingScroll {
@@ -218,6 +226,8 @@
   overflow-x: auto;
   scrollbar-width: none;
   padding-bottom: 0.25rem;
+  /* Match arrow overlays (~3rem) so the focused “today” card isn’t under the left fade. */
+  padding-left: 3rem;
   padding-right: 2.5rem;
 }
 
@@ -267,6 +277,42 @@
 
 .upcomingCard:hover {
   border-color: var(--accent);
+}
+
+.upcomingCardToday {
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0 0 1px rgba(111, 76, 235, 0.35);
+}
+
+.upcomingCardPast {
+  opacity: 0.52;
+  filter: grayscale(0.22);
+}
+
+.upcomingCardPast:hover {
+  opacity: 0.78;
+  filter: grayscale(0.08);
+}
+
+.upcomingCardDateRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.todayChip {
+  flex-shrink: 0;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 0.14rem 0.38rem;
+  border-radius: 4px;
+  background: var(--accent);
+  color: #fff;
+  line-height: 1;
 }
 
 .upcomingCardTitle {
@@ -952,7 +998,7 @@
   }
 
   .upcomingScroll {
-    padding-left: 0.25rem;
+    padding-left: 3rem;
     padding-right: 2.75rem;
   }
 
