@@ -48,6 +48,14 @@ const partnerLogosTop = [
 
 const partnerLogos = [
   {
+    name: "Arbitrum",
+    href: "https://arbitrum.io/",
+    src: "/logos-community/arbitrum-full-color-navy-clearspace.png",
+    width: 2150,
+    height: 548,
+    unoptimized: true,
+  },
+  {
     name: "Arkiv",
     href: "https://arkiv.network/",
     src: "/logos-community/arkiv.svg",
@@ -79,9 +87,9 @@ const partnerLogos = [
   {
     name: "Gnosis",
     href: "https://www.gnosis.io/business",
-    src: "/logos-community/gnosis-purple.png",
+    src: "/logos-community/gnosis-business.png",
     width: 1024,
-    height: 267,
+    height: 120,
     unoptimized: true,
     itemOpacity: 1,
   },
@@ -98,7 +106,7 @@ const partnerLogos = [
     src: "/logos-community/ronin-mark-text-blue.svg",
     width: 938,
     height: 300,
-    itemOpacity: 2,
+    itemOpacity: 8,
   },
   {
     name: "Swarm",
