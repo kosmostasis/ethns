@@ -439,7 +439,7 @@ a { color: inherit; text-decoration: none; }
 .footerBuilt { text-align: left; margin-right: auto; }
 .footerAttribution { text-align: right; font-size: .8rem; margin-left: auto; }
 .footer a { text-decoration: underline; text-underline-offset: 3px; }
-.footerFlag { vertical-align: -.2em; height: 18px; }
+.footerFlag { vertical-align: -.18em; height: 1.1em; width: auto; margin-right: .35em; }
 @media (max-width: 600px) {
   .footer { justify-content: center; text-align: center; padding: 1.25rem 1rem; gap: .65rem; font-size: .82rem; }
   .footerBuilt, .footerAttribution { text-align: center; width: 100%; margin: 0; }
@@ -1262,6 +1262,62 @@ html { scroll-behavior: smooth; }
   transform: translateY(-1px);
 }
 
+.heroCtaHackathon {
+  position: relative;
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+  background-size: 200% 200%;
+  animation: heroFadeUp 1s cubic-bezier(.22, .61, .36, 1) .42s both,
+             heroCtaHackathonShimmer 6s ease-in-out infinite;
+  color: #fff;
+  border-color: transparent;
+  font-weight: 700;
+  padding-right: .55rem;
+  box-shadow: 0 10px 28px -10px rgba(168, 85, 247, .55),
+              0 0 0 0 rgba(236, 72, 153, .55);
+}
+.heroCtaHackathon:hover {
+  color: #fff;
+  border-color: transparent;
+  transform: translateY(-1px);
+  box-shadow: 0 18px 42px -14px rgba(236, 72, 153, .65),
+              0 0 0 4px rgba(236, 72, 153, .18);
+}
+.heroCtaHackathonDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, .9);
+  animation: heroCtaHackathonPulse 1.6s ease-out infinite;
+  flex-shrink: 0;
+}
+.heroCtaHackathonBadge {
+  display: inline-flex;
+  align-items: center;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+  color: #fff;
+  background: rgba(255, 255, 255, .22);
+  border: 1px solid rgba(255, 255, 255, .35);
+  padding: .15rem .5rem;
+  border-radius: 999px;
+  margin-left: .15rem;
+}
+@keyframes heroCtaHackathonShimmer {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+@keyframes heroCtaHackathonPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(255, 255, 255, .9); }
+  70%  { box-shadow: 0 0 0 8px rgba(255, 255, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .heroCtaHackathon { animation: heroFadeUp 1s cubic-bezier(.22, .61, .36, 1) .42s both; }
+  .heroCtaHackathonDot { animation: none; }
+}
+
 @keyframes heroFadeUp {
   from { opacity: 0; transform: translateY(14px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -1440,16 +1496,20 @@ html { scroll-behavior: smooth; }
 }
 /* Logos that ship with white/light artwork — force dark for visibility on white */
 .partnerCell img[src$="ethnslogo.png"],
-.partnerCell img[src$="ronin-mark-text-blue.svg"],
 .partnerCell img[src$="web3privacy.svg"],
 .partnerCell img[src$="ayahq.png"],
 .partnerCell img[src$="suci-logotype.png"],
 .partnerCell img[src$="protoville-mark.png"],
-.partnerCell img[src$="zukascity.png"],
-.partnerCell img[src$="nammu-finance.png"],
-.partnerCell img[src$="ethkl.png"],
 .partnerCell img[src$="f-xyz.png"] {
   filter: brightness(0) saturate(100%);
+}
+/* Logos rendered as a circular avatar (square source, clipped to circle) */
+.partnerCell img[src$="p2pmentor.jpg"] {
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  height: 100%;
+  width: auto;
+  object-fit: cover;
 }
 .partnerCellLabel {
   font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
