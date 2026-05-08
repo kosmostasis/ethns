@@ -1499,7 +1499,6 @@ html { scroll-behavior: smooth; }
 .partnerCell img[src$="web3privacy.svg"],
 .partnerCell img[src$="ayahq.png"],
 .partnerCell img[src$="suci-logotype.png"],
-.partnerCell img[src$="protoville-mark.png"],
 .partnerCell img[src$="f-xyz.png"] {
   filter: brightness(0) saturate(100%);
 }
