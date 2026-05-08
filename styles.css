@@ -1416,6 +1416,11 @@ html { scroll-behavior: smooth; }
   gap: 10px;
   margin: 0 auto;
 }
+.partnersTierLead {
+  grid-template-columns: minmax(260px, 420px);
+  justify-content: center;
+  margin-bottom: .9rem;
+}
 .partnersTierPrimary {
   grid-template-columns: repeat(6, 1fr);
   max-width: 1080px;
@@ -1494,6 +1499,15 @@ html { scroll-behavior: smooth; }
   display: block;
   filter: saturate(1) contrast(1);
 }
+.partnerCellNsLead {
+  min-height: 84px;
+  padding: 16px 14px;
+  border-width: 1.5px;
+  border-color: #d6d6df;
+}
+.partnerCellNsLead img {
+  max-height: 42px;
+}
 /* Logos that ship with white/light artwork — force dark for visibility on white */
 .partnerCell img[src$="ethnslogo.png"],
 .partnerCell img[src$="web3privacy.svg"],
@@ -1557,12 +1571,18 @@ html { scroll-behavior: smooth; }
 .partnersDivider span { padding: 0 4px; }
 
 @media (max-width: 900px) {
+  .partnersTierLead {
+    grid-template-columns: minmax(240px, 360px);
+  }
   .partnersTierPrimary { grid-template-columns: repeat(4, 1fr); }
   .partnersTierCommunity { grid-template-columns: repeat(7, 1fr); }
 }
 @media (max-width: 720px) {
   .partnersSection { width: min(1080px, 100% - 1.25rem); margin: 3rem auto 2.5rem; }
   .partnersHeading { margin-bottom: 1.75rem; }
+  .partnersTierLead { margin-bottom: .65rem; }
+  .partnerCellNsLead { min-height: 62px; padding: 11px 10px; }
+  .partnerCellNsLead img { max-height: 28px; }
   .partnersTierPrimary { grid-template-columns: repeat(4, 1fr); gap: 6px; }
   .partnersTierCommunity { grid-template-columns: repeat(5, 1fr); gap: 5px; }
   .partnerCell { min-height: 48px; padding: 8px 6px; border-radius: 9px; }
@@ -1574,10 +1594,15 @@ html { scroll-behavior: smooth; }
   .partnersDivider { margin: 1.25rem auto .85rem; font-size: .58rem; gap: 6px; }
 }
 @media (max-width: 480px) {
+  .partnersTierLead {
+    grid-template-columns: minmax(200px, 300px);
+  }
   .partnersTierPrimary { grid-template-columns: repeat(3, 1fr); gap: 5px; }
   .partnersTierCommunity { grid-template-columns: repeat(5, 1fr); gap: 4px; }
   .partnerCell { min-height: 44px; padding: 6px 4px; }
   .partnerCell img { max-height: 18px; }
+  .partnerCellNsLead { min-height: 58px; padding: 9px 8px; }
+  .partnerCellNsLead img { max-height: 24px; }
   .partnerCellLabel { font-size: .62rem; }
   .partnersTierCommunity .partnerCell { min-height: 38px; padding: 5px 3px; }
   .partnersTierCommunity .partnerCell img { max-height: 14px; }
