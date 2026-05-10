@@ -1249,6 +1249,14 @@ html { scroll-behavior: smooth; }
   transform: translateY(-1px);
   box-shadow: 0 14px 30px -14px rgba(0, 0, 0, .55);
 }
+
+.heroCtaApply {
+  font-size: 1.02rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  padding: .85rem 1.55rem;
+}
+
 .heroCtaGhost {
   background: rgba(255, 255, 255, .06);
   color: #fff;
@@ -1355,6 +1363,10 @@ html { scroll-behavior: smooth; }
     padding: .7rem 1rem;
     justify-content: center;
     width: 100%;
+  }
+  .heroCtaApply {
+    font-size: .93rem;
+    padding: .78rem 1rem;
   }
 }
 @media (max-width: 380px) {
