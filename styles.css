@@ -1278,7 +1278,7 @@ html { scroll-behavior: smooth; }
   max-width: 100%;
   min-width: 0;
   box-sizing: border-box;
-  margin-top: clamp(4rem, 9vh, 6rem);
+  margin-top: clamp(1.1rem, 2.8vh, 2rem);
   animation: heroFadeUp 1s cubic-bezier(.22, .61, .36, 1) .36s both;
 }
 .heroCta {
@@ -1412,7 +1412,7 @@ html { scroll-behavior: smooth; }
   .heroCornerBL, .heroCornerBR { bottom: 12px; }
   .heroCornerTL, .heroCornerBL { left: 12px; }
   .heroCornerTR, .heroCornerBR { right: 12px; }
-  .heroCtas { margin-top: clamp(1.5rem, 3.5vh, 2.5rem); }
+  .heroCtas { margin-top: clamp(1rem, 2.5vh, 1.75rem); }
 }
 @media (max-width: 540px) {
   .heroV2 { padding: 0 clamp(10px, 3vw, 20px); }
@@ -1428,7 +1428,7 @@ html { scroll-behavior: smooth; }
   .heroHeadline { font-size: clamp(1.7rem, 8.5vw, 2.4rem); margin-bottom: .9rem; }
   .heroSubcopy { padding-left: .65rem; font-size: .82rem; line-height: 1.5; }
   .heroCtas {
-    margin-top: 1.25rem;
+    margin-top: 1rem;
     width: 100%;
     flex-direction: column;
     align-items: stretch;
