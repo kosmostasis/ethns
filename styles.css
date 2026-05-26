@@ -999,12 +999,11 @@ html { scroll-behavior: smooth; }
 .announcementsCta {
   display: inline-flex;
   align-items: center;
-  padding: .52rem 1rem;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
   border-radius: 999px;
-  font-size: .7rem;
-  font-weight: 700;
-  letter-spacing: .08em;
-  white-space: nowrap;
   color: #0a0a0a;
   background: #fff;
   border: 1px solid #d4d4dc;
@@ -1014,6 +1013,10 @@ html { scroll-behavior: smooth; }
               border-color .25s ease,
               transform .25s ease,
               box-shadow .25s ease;
+}
+.announcementsCtaIcon {
+  width: 1.15rem;
+  height: 1.15rem;
 }
 .announcementsCta:hover {
   background: #f6f6f9;
@@ -1061,13 +1064,15 @@ html { scroll-behavior: smooth; }
 }
 @media (max-width: 540px) {
   .siteSocial { display: none; }
-  .announcementsCta { padding: .48rem .75rem; font-size: .64rem; letter-spacing: .06em; }
+  .announcementsCta { width: 2.05rem; height: 2.05rem; }
+  .announcementsCtaIcon { width: 1.05rem; height: 1.05rem; }
   .applyCta { padding: .5rem .85rem; font-size: .68rem; letter-spacing: .08em; }
   .siteHeaderInner { padding: .65rem .85rem; }
   .siteLogo img { height: 20px; }
 }
 @media (max-width: 380px) {
-  .announcementsCta { padding: .42rem .6rem; font-size: .6rem; }
+  .announcementsCta { width: 1.95rem; height: 1.95rem; }
+  .announcementsCtaIcon { width: 1rem; height: 1rem; }
   .applyCta { padding: .45rem .7rem; font-size: .64rem; }
   .siteLogo img { height: 18px; }
 }
