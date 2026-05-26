@@ -1608,7 +1608,8 @@ html { scroll-behavior: smooth; }
   max-width: min(5.5rem, 88%);
 }
 /* Logos rendered as a circular avatar (square source, clipped to circle) */
-.partnerCell img[src$="p2pmentor.jpg"] {
+.partnerCell img[src$="p2pmentor.jpg"],
+.partnerCell img[src$="zukascity.png"] {
   border-radius: 50%;
   aspect-ratio: 1 / 1;
   height: 100%;
